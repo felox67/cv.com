@@ -37,6 +37,7 @@ function togglePassword(inputId, button) {
         if (icon) {
             icon.textContent = "visibility_off";
         }
+
     } else {
         input.type = "password";
 
@@ -86,12 +87,22 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         if (result.success) {
 
             // Store basic session information
-            localStorage.setItem("greenAuthUser", JSON.stringify(result.user));
+            localStorage.setItem(
+                "greenAuthUser",
+                JSON.stringify(result.user)
+            );
 
-            alert("Login successful!");
+            // Show success message underneath the login button
+            const loginStatus = document.getElementById("loginStatus");
 
-            // Change this to your dashboard page
-            window.location.href = "dashboard.html";
+            loginStatus.textContent = "✓ Login successful!";
+            loginStatus.className = "login-status success";
+
+            // Give the user a moment to see the message
+            // before redirecting to the dashboard.
+            setTimeout(() => {
+                window.location.href = "dashboard.html";
+            }, 1200);
 
         } else {
 
@@ -103,13 +114,17 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
         console.error(error);
 
-        alert("Unable to connect to the server. Please check your internet connection.");
+        alert(
+            "Unable to connect to the server. Please check your internet connection."
+        );
 
     } finally {
 
         button.disabled = false;
         button.textContent = "Log in";
+
     }
+
 });
 
 
@@ -126,6 +141,7 @@ document.getElementById("signupForm").addEventListener("submit", async function 
     const password = document.getElementById("signupPassword").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
+
     // Validate passwords
     if (password !== confirmPassword) {
         alert("Passwords do not match.");
@@ -137,10 +153,12 @@ document.getElementById("signupForm").addEventListener("submit", async function 
         return;
     }
 
+
     const button = this.querySelector(".primary-btn");
 
     button.disabled = true;
     button.textContent = "Creating account...";
+
 
     try {
 
@@ -155,6 +173,7 @@ document.getElementById("signupForm").addEventListener("submit", async function 
         });
 
         const result = await response.json();
+
 
         if (result.success) {
 
@@ -179,13 +198,17 @@ document.getElementById("signupForm").addEventListener("submit", async function 
 
         console.error(error);
 
-        alert("Unable to connect to the server. Please check your internet connection.");
+        alert(
+            "Unable to connect to the server. Please check your internet connection."
+        );
 
     } finally {
 
         button.disabled = false;
         button.textContent = "Create account";
+
     }
+
 });
 
 
@@ -216,10 +239,15 @@ function getCurrentUser() {
     }
 
     try {
+
         return JSON.parse(user);
+
     } catch (error) {
+
         return null;
+
     }
+
 }
 
 
@@ -232,4 +260,5 @@ function logout() {
     localStorage.removeItem("greenAuthUser");
 
     window.location.href = "login.html";
+
 }
