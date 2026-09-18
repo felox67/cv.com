@@ -1,0 +1,1135 @@
+/* =========================================================
+   SETTINGS PAGE
+========================================================= */
+
+.settings-page {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.settings-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.settings-header h1 {
+    margin: 4px 0 8px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #172033;
+}
+
+.settings-description {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SETTINGS LAYOUT
+========================================================= */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   SETTINGS NAVIGATION
+========================================================= */
+
+.settings-navigation {
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 4px 18px rgba(30, 41, 59, 0.04);
+    position: sticky;
+    top: 24px;
+}
+
+.settings-nav-link {
+    width: 100%;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 11px 13px;
+
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+
+    color: #64748b;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    text-align: left;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.settings-nav-link .material-icons {
+    font-size: 20px;
+}
+
+.settings-nav-link:hover {
+    background: #f5f8f7;
+    color: #16845d;
+}
+
+.settings-nav-link.active {
+    background: #eaf7f1;
+    color: #16845d;
+}
+
+.settings-nav-link.active .material-icons {
+    color: #16845d;
+}
+
+.settings-nav-link.danger-nav {
+    color: #dc4b4b;
+    margin-top: 6px;
+}
+
+.settings-nav-link.danger-nav:hover {
+    background: #fff1f1;
+    color: #c93636;
+}
+
+.settings-nav-link.danger-nav.active {
+    background: #fff0f0;
+    color: #c93636;
+}
+
+
+/* =========================================================
+   SETTINGS CONTENT
+========================================================= */
+
+.settings-content {
+    min-width: 0;
+}
+
+.settings-section {
+    display: none;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+
+/* =========================================================
+   SETTINGS CARD
+========================================================= */
+
+.settings-card {
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 16px;
+    padding: 26px;
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(30, 41, 59, 0.04);
+}
+
+.settings-card:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.settings-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.settings-card-header h2 {
+    margin: 0 0 5px;
+
+    color: #172033;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.settings-card-header p {
+    margin: 0;
+
+    color: #7a8699;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CARD ICONS
+========================================================= */
+
+.settings-card-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+}
+
+.settings-card-icon .material-icons {
+    font-size: 21px;
+}
+
+.settings-card-icon.green {
+    background: #e8f7f0;
+    color: #16845d;
+}
+
+.settings-card-icon.blue {
+    background: #eaf2ff;
+    color: #3b82f6;
+}
+
+.settings-card-icon.purple {
+    background: #f2eaff;
+    color: #8b5cf6;
+}
+
+.settings-card-icon.orange {
+    background: #fff2df;
+    color: #e58b20;
+}
+
+.settings-card-icon.red {
+    background: #ffebeb;
+    color: #dc4141;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.settings-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.settings-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.settings-input-group.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.settings-input-group label {
+    color: #344054;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   INPUTS / SELECTS
+========================================================= */
+
+.settings-input-group input,
+.settings-input-group select,
+.small-select {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 13px;
+
+    border: 1px solid #dce2e9;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #172033;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.settings-input-group input::placeholder {
+    color: #a0a8b5;
+}
+
+.settings-input-group input:hover,
+.settings-input-group select:hover,
+.small-select:hover {
+    border-color: #b9c4d1;
+}
+
+.settings-input-group input:focus,
+.settings-input-group select:focus,
+.small-select:focus {
+    border-color: #16845d;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 132, 93, 0.10);
+}
+
+.settings-input-group input:disabled {
+    background: #f6f8fa;
+    color: #8993a2;
+    cursor: not-allowed;
+}
+
+.settings-input-group small {
+    color: #8b95a5;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.settings-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+
+    margin-top: 24px;
+    padding-top: 20px;
+
+    border-top: 1px solid #edf1f5;
+}
+
+.save-message {
+    margin-right: auto;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.save-message.success {
+    color: #16845d;
+}
+
+.save-message.error {
+    color: #d63d3d;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-button,
+.secondary-button,
+.danger-button,
+.cancel-button,
+.confirm-delete {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 16px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary-button {
+    border: 1px solid #16845d;
+    background: #16845d;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #11714f;
+    border-color: #11714f;
+    box-shadow: 0 4px 12px rgba(22, 132, 93, 0.18);
+}
+
+.primary-button:active,
+.secondary-button:active,
+.danger-button:active {
+    transform: translateY(1px);
+}
+
+.primary-button .material-icons {
+    font-size: 18px;
+}
+
+.secondary-button {
+    border: 1px solid #d7dee7;
+    background: #ffffff;
+    color: #475467;
+}
+
+.secondary-button:hover {
+    border-color: #b9c4d1;
+    background: #f8fafc;
+    color: #263244;
+}
+
+
+/* =========================================================
+   SETTING OPTIONS
+========================================================= */
+
+.setting-option {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.setting-option:first-of-type {
+    padding-top: 0;
+}
+
+.setting-option:last-of-type {
+    border-bottom: 0;
+}
+
+.setting-option-info {
+    min-width: 0;
+}
+
+.setting-option-info strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #263244;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.setting-option-info p {
+    margin: 0;
+
+    color: #7a8699;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TOGGLE SWITCH
+========================================================= */
+
+.toggle {
+    position: relative;
+
+    display: inline-flex;
+
+    width: 48px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+.toggle input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+
+    background: #d9dee5;
+
+    border-radius: 50px;
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 21px;
+    height: 21px;
+
+    left: 3px;
+    top: 3px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.25s ease;
+}
+
+.toggle input:checked + .toggle-slider {
+    background: #16845d;
+}
+
+.toggle input:checked + .toggle-slider::before {
+    transform: translateX(21px);
+}
+
+.toggle input:focus-visible + .toggle-slider {
+    box-shadow:
+        0 0 0 3px rgba(22, 132, 93, 0.15);
+}
+
+
+/* =========================================================
+   PASSWORD INPUT
+========================================================= */
+
+.password-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input input {
+    padding-right: 48px;
+}
+
+.password-toggle {
+    position: absolute;
+
+    right: 4px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+    color: #8993a2;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.password-toggle:hover {
+    background: #f1f5f9;
+    color: #475467;
+}
+
+.password-toggle .material-icons {
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   PASSWORD REQUIREMENTS
+========================================================= */
+
+.password-requirements {
+    margin-top: 20px;
+    padding: 16px 18px;
+
+    border: 1px solid #e6ebf1;
+    border-radius: 10px;
+
+    background: #f8fafc;
+}
+
+.password-requirements strong {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #344054;
+    font-size: 13px;
+}
+
+.password-requirements ul {
+    margin: 0;
+    padding-left: 19px;
+
+    color: #7a8699;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.password-requirements li::marker {
+    color: #16845d;
+}
+
+
+/* =========================================================
+   LOGIN SESSIONS
+========================================================= */
+
+.session-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 16px;
+
+    border: 1px solid #e7ebf0;
+    border-radius: 11px;
+
+    background: #fafbfc;
+}
+
+.session-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #eaf2ff;
+    color: #3b82f6;
+}
+
+.session-icon .material-icons {
+    font-size: 20px;
+}
+
+.session-info {
+    flex: 1;
+}
+
+.session-info strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #344054;
+    font-size: 13px;
+}
+
+.session-info p {
+    margin: 0;
+
+    color: #8993a2;
+    font-size: 12px;
+}
+
+.current-session {
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #e8f7f0;
+    color: #16845d;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SMALL SELECT
+========================================================= */
+
+.small-select {
+    width: auto;
+    min-width: 145px;
+    height: 40px;
+}
+
+
+/* =========================================================
+   DANGER ZONE
+========================================================= */
+
+.danger-card {
+    border-color: #f2dada;
+}
+
+.danger-card .settings-card-header {
+    border-bottom-color: #f4dddd;
+}
+
+.danger-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #f1e1e1;
+}
+
+.danger-option:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.danger-option:first-of-type {
+    padding-top: 0;
+}
+
+.danger-option strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #3a3030;
+    font-size: 14px;
+}
+
+.danger-option p {
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #8a7777;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.danger-button {
+    flex-shrink: 0;
+
+    border: 1px solid #e3aaaa;
+    background: #ffffff;
+    color: #d33e3e;
+}
+
+.danger-button:hover {
+    border-color: #d33e3e;
+    background: #fff2f2;
+    color: #bd2f2f;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    width: min(100%, 430px);
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 60px rgba(15, 23, 42, 0.20);
+
+    text-align: center;
+
+    transform: translateY(15px) scale(0.98);
+
+    transition:
+        transform 0.25s ease;
+}
+
+.modal-overlay.show .modal {
+    transform: translateY(0) scale(1);
+}
+
+.modal-icon {
+    width: 54px;
+    height: 54px;
+
+    margin: 0 auto 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff0f0;
+    color: #dc4141;
+}
+
+.modal-icon .material-icons {
+    font-size: 27px;
+}
+
+.modal h2 {
+    margin: 0 0 9px;
+
+    color: #172033;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal p {
+    margin: 0 auto;
+
+    max-width: 340px;
+
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+.cancel-button {
+    border: 1px solid #d9e0e8;
+    background: #ffffff;
+    color: #475467;
+}
+
+.cancel-button:hover {
+    background: #f8fafc;
+}
+
+.confirm-delete {
+    border: 1px solid #d33e3e;
+    background: #d33e3e;
+    color: #ffffff;
+}
+
+.confirm-delete:hover {
+    background: #bd2f2f;
+    border-color: #bd2f2f;
+}
+
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+
+.mobile-overlay {
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .settings-layout {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .settings-card {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .settings-header {
+        margin-bottom: 20px;
+    }
+
+    .settings-header h1 {
+        font-size: 27px;
+    }
+
+    .settings-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .settings-navigation {
+        position: static;
+
+        display: flex;
+        gap: 5px;
+
+        overflow-x: auto;
+
+        padding: 6px;
+
+        scrollbar-width: none;
+    }
+
+    .settings-navigation::-webkit-scrollbar {
+        display: none;
+    }
+
+    .settings-nav-link {
+        width: auto;
+        min-width: max-content;
+
+        justify-content: center;
+        white-space: nowrap;
+
+        padding: 10px 13px;
+    }
+
+    .settings-nav-link.danger-nav {
+        margin-top: 0;
+    }
+
+    .settings-card {
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    .settings-form-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .settings-input-group.full-width {
+        grid-column: auto;
+    }
+
+    .setting-option {
+        align-items: flex-start;
+    }
+
+    .setting-option .toggle,
+    .setting-option .small-select {
+        margin-top: 2px;
+    }
+
+    .danger-option {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .danger-button {
+        width: 100%;
+    }
+
+    .settings-card-footer {
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    .save-message {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .settings-card-footer .primary-button,
+    .settings-card-footer .secondary-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .settings-header h1 {
+        font-size: 24px;
+    }
+
+    .settings-description {
+        font-size: 13px;
+    }
+
+    .settings-card {
+        padding: 16px;
+    }
+
+    .settings-card-header {
+        gap: 11px;
+        padding-bottom: 17px;
+        margin-bottom: 18px;
+    }
+
+    .settings-card-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .settings-card-icon .material-icons {
+        font-size: 19px;
+    }
+
+    .settings-card-header h2 {
+        font-size: 16px;
+    }
+
+    .settings-card-header p {
+        font-size: 12px;
+    }
+
+    .settings-nav-link {
+        font-size: 12px;
+    }
+
+    .settings-nav-link .material-icons {
+        font-size: 18px;
+    }
+
+    .session-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .current-session {
+        margin-left: 53px;
+    }
+
+    .modal {
+        padding: 24px 18px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #16845d;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

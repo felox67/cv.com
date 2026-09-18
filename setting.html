@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="CV Builder Settings - Manage your account preferences">
+
+    <title>CV Builder - Settings</title>
+<link rel="stylesheet" href="settings.css">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Material Icons -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+
+    <!-- Dashboard CSS -->
+
+    <link rel="stylesheet"
+          href="dashboard.css">
+
+    <!-- Settings CSS -->
+
+    <link rel="stylesheet"
+          href="setting.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     MOBILE OVERLAY
+========================================= -->
+
+<div class="mobile-overlay"
+     id="mobileOverlay">
+</div>
+
+
+
+<!-- =========================================
+     SIDEBAR
+========================================= -->
+
+<aside class="sidebar"
+       id="sidebar">
+
+
+    <div class="sidebar-top">
+
+
+        <!-- Logo -->
+
+        <a href="dashboard.html"
+           class="logo">
+
+            <div class="logo-icon">
+
+                <span class="material-icons">
+                    description
+                </span>
+
+            </div>
+
+            <span class="logo-text">
+                CV<span>Builder</span>
+            </span>
+
+        </a>
+
+
+        <!-- Close sidebar -->
+
+        <button class="close-sidebar"
+                id="closeSidebar"
+                aria-label="Close menu">
+
+            <span class="material-icons">
+                close
+            </span>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <nav class="sidebar-navigation">
+
+
+        <p class="nav-heading">
+            MAIN MENU
+        </p>
+
+
+        <a href="dashboard.html"
+           class="nav-link">
+
+            <span class="material-icons">
+                dashboard
+            </span>
+
+            <span>
+                Dashboard
+            </span>
+
+        </a>
+
+
+        <a href="templates.html"
+           class="nav-link">
+
+            <span class="material-icons">
+                grid_view
+            </span>
+
+            <span>
+                Templates
+            </span>
+
+        </a>
+
+
+        <a href="create cv.html"
+           class="nav-link">
+
+            <span class="material-icons">
+                add_circle_outline
+            </span>
+
+            <span>
+                Create CV
+            </span>
+
+        </a>
+
+
+
+        <p class="nav-heading second-heading">
+            ACCOUNT
+        </p>
+
+
+        <a href="profile.html"
+           class="nav-link">
+
+            <span class="material-icons">
+                person
+            </span>
+
+            <span>
+                My Profile
+            </span>
+
+        </a>
+
+
+        <a href="setting.html"
+           class="nav-link active">
+
+            <span class="material-icons">
+                settings
+            </span>
+
+            <span>
+                Settings
+            </span>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =====================================
+         SIDEBAR BOTTOM
+    ====================================== -->
+
+    <div class="sidebar-bottom">
+
+
+        <div class="help-box">
+
+
+            <div class="help-icon">
+
+                <span class="material-icons">
+                    help_outline
+                </span>
+
+            </div>
+
+
+            <div class="help-content">
+
+                <strong>
+                    Need help?
+                </strong>
+
+                <p>
+                    We're here to help you.
+                </p>
+
+                <a href="https://wa.me/+254757296349" target='_self'>
+                    Contact support
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <button class="logout-button"
+                id="logoutButton">
+
+            <span class="material-icons">
+                logout
+            </span>
+
+            <span>
+                Logout
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="main-content">
+
+
+
+    <!-- =====================================
+         TOP BAR
+    ====================================== -->
+
+    <header class="topbar">
+
+
+        <button class="menu-button"
+                id="menuButton"
+                aria-label="Open menu">
+
+            <span class="material-icons">
+                menu
+            </span>
+
+        </button>
+
+
+
+        <div class="topbar-search">
+
+            <span class="material-icons">
+                search
+            </span>
+
+            <input
+                type="search"
+                id="searchSettings"
+                placeholder="Search settings..."
+                autocomplete="off">
+
+        </div>
+
+
+
+        <div class="topbar-right">
+
+
+            <!-- Notifications -->
+
+            <button class="icon-button"
+                    title="Notifications">
+
+                <span class="material-icons">
+                    notifications_none
+                </span>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+
+            <!-- Profile -->
+
+            <div class="profile-menu"
+                 id="profileMenu">
+
+
+                <button class="profile-button">
+
+                    <div class="profile-avatar"
+                         id="userAvatar">
+                        U
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="topUserName">
+                            User
+                        </strong>
+
+                        <span>
+                            Account
+                        </span>
+
+                    </div>
+
+
+                    <span class="material-icons profile-arrow">
+                        expand_more
+                    </span>
+
+                </button>
+
+
+
+                <!-- Profile Dropdown -->
+
+                <div class="profile-dropdown"
+                     id="profileDropdown">
+
+
+                    <a href="profile.html">
+
+                        <span class="material-icons">
+                            person
+                        </span>
+
+                        My Profile
+
+                    </a>
+
+
+                    <a href="setting.html">
+
+                        <span class="material-icons">
+                            settings
+                        </span>
+
+                        Settings
+
+                    </a>
+
+
+                    <div class="dropdown-divider">
+                    </div>
+
+
+                    <button id="dropdownLogout">
+
+                        <span class="material-icons">
+                            logout
+                        </span>
+
+                        Logout
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         PAGE CONTENT
+    ====================================== -->
+
+    <section class="page-container settings-page">
+
+
+
+        <!-- =================================
+             PAGE HEADER
+        ================================== -->
+
+        <div class="settings-header">
+
+            <div>
+
+                <p class="welcome-small">
+                    Account
+                </p>
+
+                <h1>
+                    Settings
+                </h1>
+
+                <p class="settings-description">
+                    Manage your account, preferences,
+                    notifications and security.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             SETTINGS LAYOUT
+        ================================== -->
+
+        <div class="settings-layout">
+
+
+
+            <!-- =================================
+                 SETTINGS NAVIGATION
+            ================================== -->
+
+            <aside class="settings-navigation">
+
+
+                <button class="settings-nav-link active"
+                        data-section="general">
+
+                    <span class="material-icons">
+                        tune
+                    </span>
+
+                    <span>
+                        General
+                    </span>
+
+                </button>
+
+
+                <button class="settings-nav-link"
+                        data-section="notifications">
+
+                    <span class="material-icons">
+                        notifications_none
+                    </span>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                </button>
+
+
+                <button class="settings-nav-link"
+                        data-section="security">
+
+                    <span class="material-icons">
+                        security
+                    </span>
+
+                    <span>
+                        Security
+                    </span>
+
+                </button>
+
+
+                <button class="settings-nav-link"
+                        data-section="appearance">
+
+                    <span class="material-icons">
+                        palette
+                    </span>
+
+                    <span>
+                        Appearance
+                    </span>
+
+                </button>
+
+
+                <button class="settings-nav-link danger-nav"
+                        data-section="danger">
+
+                    <span class="material-icons">
+                        warning_amber
+                    </span>
+
+                    <span>
+                        Danger Zone
+                    </span>
+
+                </button>
+
+
+            </aside>
+
+
+
+            <!-- =================================
+                 SETTINGS CONTENT
+            ================================== -->
+
+            <div class="settings-content">
+
+
+
+                <!-- =================================
+                     GENERAL SETTINGS
+                ================================== -->
+
+                <section class="settings-section active"
+                         id="general">
+
+
+                    <div class="settings-card">
+
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon green">
+
+                                <span class="material-icons">
+                                    person
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    General Information
+                                </h2>
+
+                                <p>
+                                    Update your basic account information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <form id="generalSettingsForm">
+
+
+                            <div class="settings-form-grid">
+
+
+                                <div class="settings-input-group">
+
+                                    <label for="settingsName">
+                                        Full name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="settingsName"
+                                        placeholder="Your full name">
+
+                                </div>
+
+
+                                <div class="settings-input-group">
+
+                                    <label for="settingsEmail">
+                                        Email address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="settingsEmail"
+                                        placeholder="you@example.com"
+                                        disabled>
+
+                                    <small>
+                                        Your email address cannot
+                                        be changed here.
+                                    </small>
+
+                                </div>
+
+
+                                <div class="settings-input-group full-width">
+
+                                    <label for="settingsJobTitle">
+                                        Professional title
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="settingsJobTitle"
+                                        placeholder="e.g. Graphic Designer">
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="settings-card-footer">
+
+                                <span class="save-message"
+                                      id="generalMessage">
+                                </span>
+
+                                <button
+                                    type="submit"
+                                    class="primary-button">
+
+                                    <span class="material-icons">
+                                        save
+                                    </span>
+
+                                    Save changes
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+
+                    <!-- LANGUAGE -->
+
+                    <div class="settings-card">
+
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon blue">
+
+                                <span class="material-icons">
+                                    language
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Language & Region
+                                </h2>
+
+                                <p>
+                                    Choose your preferred language
+                                    and date format.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="settings-form-grid">
+
+
+                            <div class="settings-input-group">
+
+                                <label for="language">
+                                    Language
+                                </label>
+
+                                <select id="language">
+
+                                    <option value="en">
+                                        English
+                                    </option>
+
+                                    <option value="sw">
+                                        Kiswahili
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="settings-input-group">
+
+                                <label for="dateFormat">
+                                    Date format
+                                </label>
+
+                                <select id="dateFormat">
+
+                                    <option value="dd/mm/yyyy">
+                                        DD/MM/YYYY
+                                    </option>
+
+                                    <option value="mm/dd/yyyy">
+                                        MM/DD/YYYY
+                                    </option>
+
+                                    <option value="yyyy-mm-dd">
+                                        YYYY-MM-DD
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-card-footer">
+
+                            <button
+                                type="button"
+                                class="secondary-button"
+                                id="saveRegion">
+
+                                Save preferences
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     NOTIFICATIONS
+                ================================== -->
+
+                <section class="settings-section"
+                         id="notifications">
+
+
+                    <div class="settings-card">
+
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon purple">
+
+                                <span class="material-icons">
+                                    notifications
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Notifications
+                                </h2>
+
+                                <p>
+                                    Choose which notifications
+                                    you would like to receive.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="setting-option">
+
+                            <div class="setting-option-info">
+
+                                <strong>
+                                    Email notifications
+                                </strong>
+
+                                <p>
+                                    Receive important updates
+                                    about your account.
+                                </p>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="emailNotifications"
+                                    checked>
+
+                                <span class="toggle-slider">
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="setting-option">
+
+                            <div class="setting-option-info">
+
+                                <strong>
+                                    CV reminders
+                                </strong>
+
+                                <p>
+                                    Get reminders when your CV
+                                    has not been updated for a while.
+                                </p>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="cvReminders"
+                                    checked>
+
+                                <span class="toggle-slider">
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="setting-option">
+
+                            <div class="setting-option-info">
+
+                                <strong>
+                                    New template notifications
+                                </strong>
+
+                                <p>
+                                    Be notified when new CV
+                                    templates become available.
+                                </p>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="templateNotifications">
+
+                                <span class="toggle-slider">
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="setting-option">
+
+                            <div class="setting-option-info">
+
+                                <strong>
+                                    Marketing emails
+                                </strong>
+
+                                <p>
+                                    Receive occasional product
+                                    news and announcements.
+                                </p>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="marketingNotifications">
+
+                                <span class="toggle-slider">
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="settings-card-footer">
+
+                            <span class="save-message"
+                                  id="notificationMessage">
+                            </span>
+
+                            <button
+                                type="button"
+                                class="primary-button"
+                                id="saveNotifications">
+
+                                <span class="material-icons">
+                                    save
+                                </span>
+
+                                Save notifications
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     SECURITY
+                ================================== -->
+
+                <section class="settings-section"
+                         id="security">
+
+
+                    <div class="settings-card">
+
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon orange">
+
+                                <span class="material-icons">
+                                    lock
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Change Password
+                                </h2>
+
+                                <p>
+                                    Keep your account secure by
+                                    using a strong password.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <form id="passwordForm">
+
+
+                            <div class="settings-input-group">
+
+                                <label for="currentPassword">
+                                    Current password
+                                </label>
+
+                                <div class="password-input">
+
+                                    <input
+                                        type="password"
+                                        id="currentPassword"
+                                        placeholder="Enter current password">
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="currentPassword">
+
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="settings-input-group">
+
+                                <label for="newPassword">
+                                    New password
+                                </label>
+
+                                <div class="password-input">
+
+                                    <input
+                                        type="password"
+                                        id="newPassword"
+                                        placeholder="Enter new password">
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="newPassword">
+
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="settings-input-group">
+
+                                <label for="confirmNewPassword">
+                                    Confirm new password
+                                </label>
+
+                                <div class="password-input">
+
+                                    <input
+                                        type="password"
+                                        id="confirmNewPassword"
+                                        placeholder="Confirm new password">
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="confirmNewPassword">
+
+                                        <span class="material-icons">
+                                            visibility
+                                        </span>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="password-requirements">
+
+                                <strong>
+                                    Password requirements
+                                </strong>
+
+                                <ul>
+
+                                    <li>
+                                        At least 8 characters
+                                    </li>
+
+                                    <li>
+                                        Use a combination of letters
+                                        and numbers
+                                    </li>
+
+                                    <li>
+                                        Avoid using common passwords
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                            <div class="settings-card-footer">
+
+                                <span class="save-message"
+                                      id="passwordMessage">
+                                </span>
+
+                                <button
+                                    type="submit"
+                                    class="primary-button">
+
+                                    <span class="material-icons">
+                                        lock
+                                    </span>
+
+                                    Update password
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+
+                    <!-- LOGIN SESSIONS -->
+
+                    <div class="settings-card">
+
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon blue">
+
+                                <span class="material-icons">
+                                    devices
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Login Sessions
+                                </h2>
+
+                                <p>
+                                    Manage devices that are currently
+                                    signed in to your account.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="session-item">
+
+
+                            <div class="session-icon">
+
+                                <span class="material-icons">
+                                    computer
+                                </span>
+
+                            </div>
+
+
+                            <div class="session-info">
+
+                                <strong>
+                                    Current device
+                                </strong>
+
+                                <p>
+                                    Active now
+                                </p>
+
+                            </div>
+
+
+                            <span class="current-session">
+                                Current
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="settings-card-footer">
+
+                            <button
+                                type="button"
+                                class="secondary-button"
+                                id="logoutOtherDevices">
+
+                                Sign out other devices
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     APPEARANCE
+                ================================== -->
+
+                <section class="settings-section"
+                         id="appearance">
+
+
+                    <div class="settings-card">
+
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon green">
+
+                                <span class="material-icons">
+                                    palette
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Appearance
+                                </h2>
+
+                                <p>
+                                    Customize how CV Builder
+                                    looks on your device.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="setting-option">
+
+
+                            <div class="setting-option-info">
+
+                                <strong>
+                                    Theme
+                                </strong>
+
+                                <p>
+                                    Choose how the application
+                                    should appear.
+                                </p>
+
+                            </div>
+
+
+                            <select id="themeSelect"
+                                    class="small-select">
+
+                                <option value="light">
+                                    Light
+                                </option>
+
+                                <option value="dark">
+                                    Dark
+                                </option>
+
+                                <option value="system">
+                                    System default
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="setting-option">
+
+
+                            <div class="setting-option-info">
+
+                                <strong>
+                                    Compact layout
+                                </strong>
+
+                                <p>
+                                    Use a more compact interface
+                                    to display more content.
+                                </p>
+
+                            </div>
+
+
+                            <label class="toggle">
+
+                                <input
+                                    type="checkbox"
+                                    id="compactLayout">
+
+                                <span class="toggle-slider">
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="settings-card-footer">
+
+                            <span class="save-message"
+                                  id="appearanceMessage">
+                            </span>
+
+                            <button
+                                type="button"
+                                class="primary-button"
+                                id="saveAppearance">
+
+                                <span class="material-icons">
+                                    save
+                                </span>
+
+                                Save appearance
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     DANGER ZONE
+                ================================== -->
+
+                <section class="settings-section"
+                         id="danger">
+
+
+                    <div class="settings-card danger-card">
+
+
+                        <div class="settings-card-header">
+
+                            <div class="settings-card-icon red">
+
+                                <span class="material-icons">
+                                    warning
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Danger Zone
+                                </h2>
+
+                                <p>
+                                    These actions can permanently
+                                    affect your account.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="danger-option">
+
+
+                            <div>
+
+                                <strong>
+                                    Delete all CVs
+                                </strong>
+
+                                <p>
+                                    Permanently delete all CVs
+                                    associated with your account.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="danger-button"
+                                id="deleteAllCVs">
+
+                                Delete all CVs
+
+                            </button>
+
+                        </div>
+
+
+
+                        <div class="danger-option">
+
+
+                            <div>
+
+                                <strong>
+                                    Delete account
+                                </strong>
+
+                                <p>
+                                    Permanently delete your account,
+                                    profile and all associated data.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="danger-button"
+                                id="deleteAccount">
+
+                                Delete account
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="dashboard-footer">
+
+        <p>
+
+            ©
+            <span id="currentYear"></span>
+
+            CV Builder.
+            All rights reserved.
+
+        </p>
+
+
+        <div>
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+            <a href="#">
+                Help
+            </a>
+
+        </div>
+
+    </footer>
+
+</main>
+
+
+
+<!-- =========================================
+     CONFIRMATION MODAL
+========================================= -->
+
+<div class="modal-overlay"
+     id="confirmationModal">
+
+
+    <div class="modal">
+
+
+        <div class="modal-icon">
+
+            <span class="material-icons"
+                  id="modalIcon">
+                warning
+            </span>
+
+        </div>
+
+
+        <h2 id="modalTitle">
+            Are you sure?
+        </h2>
+
+
+        <p id="modalMessage">
+            This action cannot be undone.
+        </p>
+
+
+        <div class="modal-actions">
+
+            <button
+                class="cancel-button"
+                id="cancelModal">
+
+                Cancel
+
+            </button>
+
+
+            <button
+                class="confirm-delete"
+                id="confirmModal">
+
+                Confirm
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     SETTINGS JAVASCRIPT
+========================================= -->
+
+<script>
+
+
+/* =========================================
+   CURRENT YEAR
+========================================= */
+
+document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+
+
+
+/* =========================================
+   MOBILE SIDEBAR
+========================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const closeSidebar =
+    document.getElementById("closeSidebar");
+
+const sidebar =
+    document.getElementById("sidebar");
+
+const mobileOverlay =
+    document.getElementById("mobileOverlay");
+
+
+menuButton.addEventListener(
+    "click",
+    function () {
+
+        sidebar.classList.add("show");
+
+        mobileOverlay.classList.add("show");
+
+    }
+);
+
+
+closeSidebar.addEventListener(
+    "click",
+    function () {
+
+        sidebar.classList.remove("show");
+
+        mobileOverlay.classList.remove("show");
+
+    }
+);
+
+
+mobileOverlay.addEventListener(
+    "click",
+    function () {
+
+        sidebar.classList.remove("show");
+
+        mobileOverlay.classList.remove("show");
+
+    }
+);
+
+
+
+/* =========================================
+   PROFILE DROPDOWN
+========================================= */
+
+const profileButton =
+    document.querySelector(".profile-button");
+
+const profileDropdown =
+    document.getElementById("profileDropdown");
+
+
+profileButton.addEventListener(
+    "click",
+    function (event) {
+
+        event.stopPropagation();
+
+        profileDropdown.classList.toggle("show");
+
+    }
+);
+
+
+document.addEventListener(
+    "click",
+    function () {
+
+        profileDropdown.classList.remove("show");
+
+    }
+);
+
+
+
+/* =========================================
+   SETTINGS NAVIGATION
+========================================= */
+
+const settingsLinks =
+    document.querySelectorAll(".settings-nav-link");
+
+const settingsSections =
+    document.querySelectorAll(".settings-section");
+
+
+settingsLinks.forEach(
+    function (link) {
+
+        link.addEventListener(
+            "click",
+            function () {
+
+                const sectionId =
+                    this.dataset.section;
+
+
+                settingsLinks.forEach(
+                    function (item) {
+
+                        item.classList.remove("active");
+
+                    }
+                );
+
+
+                settingsSections.forEach(
+                    function (section) {
+
+                        section.classList.remove("active");
+
+                    }
+                );
+
+
+                this.classList.add("active");
+
+
+                const selectedSection =
+                    document.getElementById(sectionId);
+
+
+                if (selectedSection) {
+
+                    selectedSection.classList.add("active");
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   PASSWORD VISIBILITY
+========================================= */
+
+document.querySelectorAll(
+    ".password-toggle"
+).forEach(
+    function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const targetId =
+                    this.dataset.target;
+
+                const input =
+                    document.getElementById(targetId);
+
+                const icon =
+                    this.querySelector(".material-icons");
+
+
+                if (!input) return;
+
+
+                if (input.type === "password") {
+
+                    input.type = "text";
+
+                    icon.textContent =
+                        "visibility_off";
+
+                } else {
+
+                    input.type = "password";
+
+                    icon.textContent =
+                        "visibility";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   LOAD USER INFORMATION
+========================================= */
+
+const loggedInUser =
+    JSON.parse(
+        localStorage.getItem("loggedInUser")
+    );
+
+
+if (loggedInUser) {
+
+
+    const name =
+        loggedInUser.full_name ||
+        loggedInUser.name ||
+        "User";
+
+
+    const email =
+        loggedInUser.email ||
+        "";
+
+
+    document.getElementById(
+        "topUserName"
+    ).textContent = name;
+
+
+    document.getElementById(
+        "userAvatar"
+    ).textContent =
+        name.charAt(0).toUpperCase();
+
+
+    document.getElementById(
+        "settingsName"
+    ).value = name;
+
+
+    document.getElementById(
+        "settingsEmail"
+    ).value = email;
+
+
+    document.getElementById(
+        "settingsJobTitle"
+    ).value =
+        loggedInUser.job_title || "";
+
+}
+
+
+
+/* =========================================
+   GENERAL SETTINGS
+========================================= */
+
+const generalForm =
+    document.getElementById(
+        "generalSettingsForm"
+    );
+
+
+generalForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "settingsName"
+            ).value.trim();
+
+
+        const jobTitle =
+            document.getElementById(
+                "settingsJobTitle"
+            ).value.trim();
+
+
+        if (name.length < 2) {
+
+            showMessage(
+                "generalMessage",
+                "Please enter your full name.",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        const updatedUser =
+            loggedInUser || {};
+
+
+        updatedUser.name = name;
+
+        updatedUser.full_name = name;
+
+        updatedUser.job_title = jobTitle;
+
+
+        localStorage.setItem(
+            "loggedInUser",
+            JSON.stringify(updatedUser)
+        );
+
+
+        document.getElementById(
+            "topUserName"
+        ).textContent = name;
+
+
+        document.getElementById(
+            "userAvatar"
+        ).textContent =
+            name.charAt(0).toUpperCase();
+
+
+        showMessage(
+            "generalMessage",
+            "Changes saved successfully.",
+            "success"
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   REGION PREFERENCES
+========================================= */
+
+document.getElementById(
+    "saveRegion"
+).addEventListener(
+    "click",
+    function () {
+
+        localStorage.setItem(
+            "cvBuilderLanguage",
+            document.getElementById(
+                "language"
+            ).value
+        );
+
+
+        localStorage.setItem(
+            "cvBuilderDateFormat",
+            document.getElementById(
+                "dateFormat"
+            ).value
+        );
+
+
+        alert(
+            "Language and regional preferences saved."
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   NOTIFICATIONS
+========================================= */
+
+document.getElementById(
+    "saveNotifications"
+).addEventListener(
+    "click",
+    function () {
+
+        const notifications = {
+
+            email:
+                document.getElementById(
+                    "emailNotifications"
+                ).checked,
+
+            reminders:
+                document.getElementById(
+                    "cvReminders"
+                ).checked,
+
+            templates:
+                document.getElementById(
+                    "templateNotifications"
+                ).checked,
+
+            marketing:
+                document.getElementById(
+                    "marketingNotifications"
+                ).checked
+
+        };
+
+
+        localStorage.setItem(
+            "cvBuilderNotifications",
+            JSON.stringify(notifications)
+        );
+
+
+        showMessage(
+            "notificationMessage",
+            "Notification preferences saved.",
+            "success"
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   PASSWORD CHANGE
+========================================= */
+
+document.getElementById(
+    "passwordForm"
+).addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+
+        const currentPassword =
+            document.getElementById(
+                "currentPassword"
+            ).value;
+
+
+        const newPassword =
+            document.getElementById(
+                "newPassword"
+            ).value;
+
+
+        const confirmPassword =
+            document.getElementById(
+                "confirmNewPassword"
+            ).value;
+
+
+        if (!currentPassword) {
+
+            showMessage(
+                "passwordMessage",
+                "Enter your current password.",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        if (newPassword.length < 8) {
+
+            showMessage(
+                "passwordMessage",
+                "New password must contain at least 8 characters.",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        if (newPassword !== confirmPassword) {
+
+            showMessage(
+                "passwordMessage",
+                "New passwords do not match.",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        /*
+         * Backend connection will be added later.
+         */
+
+        showMessage(
+            "passwordMessage",
+            "Password validation passed. Backend update is ready to be connected.",
+            "success"
+        );
+
+
+        document.getElementById(
+            "passwordForm"
+        ).reset();
+
+    }
+);
+
+
+
+/* =========================================
+   APPEARANCE
+========================================= */
+
+const savedTheme =
+    localStorage.getItem(
+        "cvBuilderTheme"
+    );
+
+
+if (savedTheme) {
+
+    document.getElementById(
+        "themeSelect"
+    ).value = savedTheme;
+
+}
+
+
+document.getElementById(
+    "saveAppearance"
+).addEventListener(
+    "click",
+    function () {
+
+        const theme =
+            document.getElementById(
+                "themeSelect"
+            ).value;
+
+
+        const compact =
+            document.getElementById(
+                "compactLayout"
+            ).checked;
+
+
+        localStorage.setItem(
+            "cvBuilderTheme",
+            theme
+        );
+
+
+        localStorage.setItem(
+            "cvBuilderCompact",
+            compact
+        );
+
+
+        showMessage(
+            "appearanceMessage",
+            "Appearance preferences saved.",
+            "success"
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   CONFIRMATION MODAL
+========================================= */
+
+const confirmationModal =
+    document.getElementById(
+        "confirmationModal"
+    );
+
+const modalTitle =
+    document.getElementById(
+        "modalTitle"
+    );
+
+const modalMessage =
+    document.getElementById(
+        "modalMessage"
+    );
+
+const confirmModal =
+    document.getElementById(
+        "confirmModal"
+    );
+
+const cancelModal =
+    document.getElementById(
+        "cancelModal"
+    );
+
+
+let pendingAction = null;
+
+
+function openConfirmation(
+    title,
+    message,
+    action
+) {
+
+    modalTitle.textContent = title;
+
+    modalMessage.textContent = message;
+
+    pendingAction = action;
+
+    confirmationModal.classList.add(
+        "show"
+    );
+
+}
+
+
+function closeConfirmation() {
+
+    confirmationModal.classList.remove(
+        "show"
+    );
+
+    pendingAction = null;
+
+}
+
+
+cancelModal.addEventListener(
+    "click",
+    closeConfirmation
+);
+
+
+confirmModal.addEventListener(
+    "click",
+    function () {
+
+        if (pendingAction) {
+
+            pendingAction();
+
+        }
+
+        closeConfirmation();
+
+    }
+);
+
+
+
+/* =========================================
+   DELETE ALL CVs
+========================================= */
+
+document.getElementById(
+    "deleteAllCVs"
+).addEventListener(
+    "click",
+    function () {
+
+        openConfirmation(
+
+            "Delete all CVs?",
+
+            "All of your saved CVs will be permanently deleted. This action cannot be undone.",
+
+            function () {
+
+                /*
+                 * Later connect this to
+                 * Google Apps Script.
+                 */
+
+                console.log(
+                    "Delete all CVs"
+                );
+
+                alert(
+                    "Backend connection required to delete your CVs."
+                );
+
+            }
+
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   DELETE ACCOUNT
+========================================= */
+
+document.getElementById(
+    "deleteAccount"
+).addEventListener(
+    "click",
+    function () {
+
+        openConfirmation(
+
+            "Delete your account?",
+
+            "Your account and associated data will be permanently deleted. This action cannot be undone.",
+
+            function () {
+
+                /*
+                 * Later connect this to
+                 * Google Apps Script.
+                 */
+
+                console.log(
+                    "Delete account"
+                );
+
+                alert(
+                    "Backend connection required to delete your account."
+                );
+
+            }
+
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   SIGN OUT OTHER DEVICES
+========================================= */
+
+document.getElementById(
+    "logoutOtherDevices"
+).addEventListener(
+    "click",
+    function () {
+
+        alert(
+            "Sign out of other devices will be connected to the backend."
+        );
+
+    }
+);
+
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+function logoutUser() {
+
+    localStorage.removeItem(
+        "loggedInUser"
+    );
+
+
+    sessionStorage.removeItem(
+        "greenauth_token"
+    );
+
+
+    window.location.href =
+        "login.html";
+
+}
+
+
+document.getElementById(
+    "logoutButton"
+).addEventListener(
+    "click",
+    logoutUser
+);
+
+
+document.getElementById(
+    "dropdownLogout"
+).addEventListener(
+    "click",
+    logoutUser
+);
+
+
+
+/* =========================================
+   MESSAGE HELPER
+========================================= */
+
+function showMessage(
+    elementId,
+    message,
+    type
+) {
+
+    const element =
+        document.getElementById(
+            elementId
+        );
+
+
+    if (!element) return;
+
+
+    element.textContent =
+        message;
+
+
+    element.className =
+        "save-message " + type;
+
+
+    setTimeout(
+        function () {
+
+            element.textContent = "";
+
+        },
+        4000
+    );
+
+}
+
+</script>
+<script src="auth.js"></script>
+</body>
+
+</html>

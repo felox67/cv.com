@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create New CV | CVBuilder</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Create CV CSS -->
+    <link rel="stylesheet" href="create cv.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+                <span class="material-icons">description</span>
+            </div>
+
+            <span>CVBuilder</span>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="templates.html">
+                <span class="material-icons">grid_view</span>
+                <span>Templates</span>
+            </a>
+
+            <a href="create cv.html" class="active">
+                <span class="material-icons">add_circle</span>
+                <span>Create CV</span>
+            </a>
+
+            <a href="profile.html">
+                <span class="material-icons">person</span>
+                <span>My Profile</span>
+            </a>
+
+            <a href="setting.html">
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+                <span class="material-icons">help_outline</span>
+
+                <div>
+                    <strong>Need Help?</strong>
+                    <p>We're here to help you.</p>
+                    <a href="#">Contact Support</a>
+                </div>
+            </div>
+
+            <button class="logout-btn" id="logoutBtn">
+                <span class="material-icons">logout</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu" id="mobileMenu">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <div class="page-title">
+                <h1>Create New CV</h1>
+                <p>Build a professional CV in a few simple steps.</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="notification-btn">
+                    <span class="material-icons">notifications_none</span>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile-mini" id="profileMini">
+
+                    <div class="profile-avatar">
+                        <span class="material-icons">person</span>
+                    </div>
+
+                    <div class="profile-name">
+                        <strong id="userName">User</strong>
+                        <small>Account</small>
+                    </div>
+
+                    <span class="material-icons arrow">expand_more</span>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <a href="profile.html">
+                            <span class="material-icons">person</span>
+                            My Profile
+                        </a>
+
+                        <a href="setting.html">
+                            <span class="material-icons">settings</span>
+                            Settings
+                        </a>
+
+                        <button id="dropdownLogout">
+                            <span class="material-icons">logout</span>
+                            Logout
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE ================= -->
+        <section class="create-page">
+
+            <!-- PROGRESS -->
+            <div class="progress-container">
+
+                <div class="progress-step active">
+                    <div class="step-number">1</div>
+                    <span>Basic Setup</span>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <div class="step-number">2</div>
+                    <span>CV Information</span>
+                </div>
+
+                <div class="progress-line"></div>
+
+                <div class="progress-step">
+                    <div class="step-number">3</div>
+                    <span>Finish</span>
+                </div>
+
+            </div>
+
+
+            <!-- MAIN CREATE CARD -->
+            <div class="create-container">
+
+                <div class="intro">
+
+                    <div class="intro-icon">
+                        <span class="material-icons">description</span>
+                    </div>
+
+                    <div>
+                        <h2>Let's create your CV</h2>
+
+                        <p>
+                            Start by giving your CV a name and choosing
+                            a design that matches your professional style.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- CV TITLE -->
+                <div class="form-section">
+
+                    <label for="cvTitle">
+                        CV Name
+                        <span>*</span>
+                    </label>
+
+                    <p class="field-description">
+                        Give your CV a name so you can easily identify it later.
+                    </p>
+
+                    <div class="input-wrapper">
+
+                        <span class="material-icons">edit</span>
+
+                        <input
+                            type="text"
+                            id="cvTitle"
+                            placeholder="e.g. My Professional CV"
+                            maxlength="100"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="character-count">
+                        <span id="titleCount">0</span>/100
+                    </div>
+
+                </div>
+
+
+                <!-- TEMPLATE SELECTION -->
+                <div class="form-section">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <label>
+                                Choose a Template
+                                <span>*</span>
+                            </label>
+
+                            <p class="field-description">
+                                Select the design you want to use for your CV.
+                            </p>
+                        </div>
+
+                        <a href="templates.html" class="view-templates">
+                            View All Templates
+                            <span class="material-icons">arrow_forward</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="templates-grid">
+
+                        <!-- MODERN -->
+                        <label class="template-card selected">
+
+                            <input
+                                type="radio"
+                                name="template"
+                                value="modern"
+                                checked
+                            >
+
+                            <div class="template-preview modern-preview">
+
+                                <div class="preview-sidebar"></div>
+
+                                <div class="preview-content">
+
+                                    <div class="preview-line large"></div>
+                                    <div class="preview-line medium"></div>
+
+                                    <div class="preview-section"></div>
+
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+
+                                    <div class="preview-section"></div>
+
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+
+                                </div>
+
+                                <div class="selected-badge">
+                                    <span class="material-icons">check</span>
+                                </div>
+
+                            </div>
+
+                            <div class="template-info">
+                                <div>
+                                    <strong>Modern</strong>
+                                    <small>Clean & Professional</small>
+                                </div>
+
+                                <span class="material-icons">
+                                    check_circle
+                                </span>
+                            </div>
+
+                        </label>
+
+
+                        <!-- CLASSIC -->
+                        <label class="template-card">
+
+                            <input
+                                type="radio"
+                                name="template"
+                                value="classic"
+                            >
+
+                            <div class="template-preview classic-preview">
+
+                                <div class="classic-header"></div>
+
+                                <div class="classic-body">
+
+                                    <div class="preview-line large"></div>
+                                    <div class="preview-line medium"></div>
+
+                                    <div class="preview-section"></div>
+
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+
+                                    <div class="preview-section"></div>
+
+                                    <div class="preview-line"></div>
+                                    <div class="preview-line short"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="template-info">
+                                <div>
+                                    <strong>Classic</strong>
+                                    <small>Traditional & Elegant</small>
+                                </div>
+
+                                <span class="material-icons">
+                                    radio_button_unchecked
+                                </span>
+                            </div>
+
+                        </label>
+
+
+                        <!-- CREATIVE -->
+                        <label class="template-card">
+
+                            <input
+                                type="radio"
+                                name="template"
+                                value="creative"
+                            >
+
+                            <div class="template-preview creative-preview">
+
+                                <div class="creative-header"></div>
+
+                                <div class="creative-body">
+
+                                    <div class="creative-column">
+
+                                        <div class="preview-line large"></div>
+                                        <div class="preview-line short"></div>
+
+                                        <div class="preview-section"></div>
+
+                                        <div class="preview-line"></div>
+                                        <div class="preview-line"></div>
+                                        <div class="preview-line short"></div>
+
+                                    </div>
+
+                                    <div class="creative-column">
+
+                                        <div class="preview-line"></div>
+                                        <div class="preview-line short"></div>
+
+                                        <div class="preview-section"></div>
+
+                                        <div class="preview-line"></div>
+                                        <div class="preview-line"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="template-info">
+                                <div>
+                                    <strong>Creative</strong>
+                                    <small>Modern & Stylish</small>
+                                </div>
+
+                                <span class="material-icons">
+                                    radio_button_unchecked
+                                </span>
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COLOR -->
+                <div class="form-section">
+
+                    <label>
+                        Primary Color
+                    </label>
+
+                    <p class="field-description">
+                        Choose the main color that will appear on your CV.
+                    </p>
+
+                    <div class="color-options">
+
+                        <label class="color-option selected-color">
+
+                            <input
+                                type="radio"
+                                name="color"
+                                value="#16a34a"
+                                checked
+                            >
+
+                            <span
+                                class="color-circle"
+                                style="background:#16a34a;"
+                            ></span>
+
+                        </label>
+
+
+                        <label class="color-option">
+
+                            <input
+                                type="radio"
+                                name="color"
+                                value="#2563eb"
+                            >
+
+                            <span
+                                class="color-circle"
+                                style="background:#2563eb;"
+                            ></span>
+
+                        </label>
+
+
+                        <label class="color-option">
+
+                            <input
+                                type="radio"
+                                name="color"
+                                value="#7c3aed"
+                            >
+
+                            <span
+                                class="color-circle"
+                                style="background:#7c3aed;"
+                            ></span>
+
+                        </label>
+
+
+                        <label class="color-option">
+
+                            <input
+                                type="radio"
+                                name="color"
+                                value="#dc2626"
+                            >
+
+                            <span
+                                class="color-circle"
+                                style="background:#dc2626;"
+                            ></span>
+
+                        </label>
+
+
+                        <label class="color-option">
+
+                            <input
+                                type="radio"
+                                name="color"
+                                value="#ea580c"
+                            >
+
+                            <span
+                                class="color-circle"
+                                style="background:#ea580c;"
+                            ></span>
+
+                        </label>
+
+
+                        <label class="color-option">
+
+                            <input
+                                type="radio"
+                                name="color"
+                                value="#0f172a"
+                            >
+
+                            <span
+                                class="color-circle"
+                                style="background:#0f172a;"
+                            ></span>
+
+                        </label>
+
+
+                        <label class="custom-color-option">
+
+                            <input
+                                type="color"
+                                id="customColor"
+                                value="#16a34a"
+                            >
+
+                            <span class="custom-color-circle">
+                                <span class="material-icons">add</span>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <div class="selected-color-value">
+                        Selected color:
+                        <strong id="selectedColor">#16A34A</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- FONT -->
+                <div class="form-section">
+
+                    <label for="fontFamily">
+                        CV Font
+                    </label>
+
+                    <p class="field-description">
+                        Select the font you would like to use on your CV.
+                    </p>
+
+                    <div class="font-select-wrapper">
+
+                        <span class="material-icons">font_download</span>
+
+                        <select id="fontFamily">
+
+                            <option value="Inter">
+                                Inter — Modern
+                            </option>
+
+                            <option value="Arial">
+                                Arial — Simple
+                            </option>
+
+                            <option value="Roboto">
+                                Roboto — Clean
+                            </option>
+
+                            <option value="Georgia">
+                                Georgia — Classic
+                            </option>
+
+                            <option value="Times New Roman">
+                                Times New Roman — Traditional
+                            </option>
+
+                        </select>
+
+                        <span class="material-icons dropdown-icon">
+                            expand_more
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+                <div class="form-actions">
+
+                    <a
+                        href="dashboard.html"
+                        class="btn btn-secondary"
+                    >
+                        <span class="material-icons">arrow_back</span>
+                        Cancel
+                    </a>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="continueBtn"
+                    >
+                        Continue
+                        <span class="material-icons">arrow_forward</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <p>
+                &copy;
+                <span id="currentYear"></span>
+                CVBuilder. All rights reserved.
+            </p>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- MOBILE OVERLAY -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+
+    /* =========================================
+       USER INFORMATION
+    ========================================= */
+
+    const savedUser = localStorage.getItem("cvbuilder_user");
+
+    if (savedUser) {
+
+        try {
+
+            const user = JSON.parse(savedUser);
+
+            if (user.full_name) {
+                document.getElementById("userName").textContent =
+                    user.full_name;
+            }
+
+            if (user.name) {
+                document.getElementById("userName").textContent =
+                    user.name;
+            }
+
+        } catch (error) {
+
+            console.log("User information could not be loaded.");
+
+        }
+
+    }
+
+
+    /* =========================================
+       CV TITLE CHARACTER COUNT
+    ========================================= */
+
+    const cvTitle = document.getElementById("cvTitle");
+    const titleCount = document.getElementById("titleCount");
+
+    cvTitle.addEventListener("input", function () {
+
+        titleCount.textContent = this.value.length;
+
+    });
+
+
+    /* =========================================
+       TEMPLATE SELECTION
+    ========================================= */
+
+    const templateCards =
+        document.querySelectorAll(".template-card");
+
+    const templateInputs =
+        document.querySelectorAll(
+            'input[name="template"]'
+        );
+
+    templateInputs.forEach(input => {
+
+        input.addEventListener("change", function () {
+
+            templateCards.forEach(card => {
+                card.classList.remove("selected");
+            });
+
+            this.closest(".template-card")
+                .classList.add("selected");
+
+        });
+
+    });
+
+
+    /* =========================================
+       COLOR SELECTION
+    ========================================= */
+
+    const colorOptions =
+        document.querySelectorAll(
+            'input[name="color"]'
+        );
+
+    const selectedColor =
+        document.getElementById("selectedColor");
+
+    colorOptions.forEach(input => {
+
+        input.addEventListener("change", function () {
+
+            document
+                .querySelectorAll(".color-option")
+                .forEach(option => {
+                    option.classList.remove(
+                        "selected-color"
+                    );
+                });
+
+            this.closest(".color-option")
+                .classList.add("selected-color");
+
+            selectedColor.textContent =
+                this.value.toUpperCase();
+
+        });
+
+    });
+
+
+    /* =========================================
+       CUSTOM COLOR
+    ========================================= */
+
+    const customColor =
+        document.getElementById("customColor");
+
+    customColor.addEventListener("input", function () {
+
+        document
+            .querySelectorAll(".color-option")
+            .forEach(option => {
+                option.classList.remove(
+                    "selected-color"
+                );
+            });
+
+        selectedColor.textContent =
+            this.value.toUpperCase();
+
+    });
+
+
+    /* =========================================
+       CONTINUE BUTTON
+    ========================================= */
+
+    const continueBtn =
+        document.getElementById("continueBtn");
+
+    continueBtn.addEventListener("click", function () {
+
+        const title = cvTitle.value.trim();
+
+        if (!title) {
+
+            cvTitle.focus();
+
+            alert("Please enter a name for your CV.");
+
+            return;
+
+        }
+
+
+        /* Get selected template */
+
+        const selectedTemplate =
+            document.querySelector(
+                'input[name="template"]:checked'
+            ).value;
+
+
+        /* Get selected color */
+
+        let selectedColorValue =
+            document.querySelector(
+                'input[name="color"]:checked'
+            );
+
+        let color =
+            selectedColorValue
+                ? selectedColorValue.value
+                : customColor.value;
+
+
+        /* Get font */
+
+        const font =
+            document.getElementById(
+                "fontFamily"
+            ).value;
+
+
+        /* Generate temporary CV ID */
+
+        const cvId =
+            "CV" +
+            Date.now();
+
+
+        /* CV information */
+
+        const cvData = {
+
+            cv_id: cvId,
+
+            cv_title: title,
+
+            template: selectedTemplate,
+
+            primary_color: color,
+
+            font: font,
+
+            created_at:
+                new Date().toISOString(),
+
+            updated_at:
+                new Date().toISOString()
+
+        };
+
+
+        /*
+         * Temporarily store the CV.
+         *
+         * Later this will be replaced with
+         * a Google Apps Script API request.
+         */
+
+        localStorage.setItem(
+            "current_cv",
+            JSON.stringify(cvData)
+        );
+
+
+        /*
+         * Move to the CV editor.
+         */
+
+        window.location.href =
+            "editor.html?id=" +
+            encodeURIComponent(cvId);
+
+    });
+
+
+    /* =========================================
+       PROFILE DROPDOWN
+    ========================================= */
+
+    const profileMini =
+        document.getElementById("profileMini");
+
+    const profileDropdown =
+        document.getElementById("profileDropdown");
+
+    profileMini.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        profileDropdown.classList.toggle("show");
+
+    });
+
+
+    document.addEventListener("click", function () {
+
+        profileDropdown.classList.remove("show");
+
+    });
+
+
+    /* =========================================
+       LOGOUT
+    ========================================= */
+
+    function logout() {
+
+        localStorage.removeItem("cvbuilder_user");
+
+        localStorage.removeItem("current_cv");
+
+        window.location.href =
+            "login.html";
+
+    }
+
+
+    document
+        .getElementById("logoutBtn")
+        .addEventListener("click", logout);
+
+
+    document
+        .getElementById("dropdownLogout")
+        .addEventListener("click", logout);
+
+
+    /* =========================================
+       MOBILE SIDEBAR
+    ========================================= */
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const sidebarOverlay =
+        document.getElementById("sidebarOverlay");
+
+
+    mobileMenu.addEventListener("click", function () {
+
+        sidebar.classList.toggle("open");
+
+        sidebarOverlay.classList.toggle("show");
+
+    });
+
+
+    sidebarOverlay.addEventListener(
+        "click",
+        function () {
+
+            sidebar.classList.remove("open");
+
+            sidebarOverlay.classList.remove("show");
+
+        }
+    );
+
+
+    /* =========================================
+       CURRENT YEAR
+    ========================================= */
+
+    document.getElementById(
+        "currentYear"
+    ).textContent = new Date().getFullYear();
+
+</script>
+<script src="auth.js"></script>
+</body>
+</html>
+```

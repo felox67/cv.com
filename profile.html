@@ -1,0 +1,1969 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | CVBuilder</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Profile CSS -->
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <a href="dashboard.html">
+            <span class="logo-icon">
+                <span class="material-icons">description</span>
+            </span>
+            <span>CVBuilder</span>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+
+        <div class="nav-section-title">
+            Workspace
+        </div>
+
+        <div class="nav-item">
+            <a href="dashboard.html">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="templates.html">
+                <span class="material-icons">grid_view</span>
+                <span>Templates</span>
+            </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="create cv.html">
+                <span class="material-icons">add_circle_outline</span>
+                <span>Create CV</span>
+            </a>
+        </div>
+
+        <div class="nav-section-title nav-title-spaced">
+            Account
+        </div>
+
+        <div class="nav-item active">
+            <a href="profile.html">
+                <span class="material-icons">person</span>
+                <span>My Profile</span>
+            </a>
+        </div>
+
+        <div class="nav-item">
+            <a href="setting.html">
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- Help -->
+    <div class="sidebar-help">
+
+        <span class="material-icons">help_outline</span>
+
+        <h4>Need some help?</h4>
+
+        <p>
+            Learn how to create and manage professional CVs.
+        </p>
+
+        <a href="https://wa.me/+254757296349" target='_self'>
+    Visit Help Center →
+</a>
+
+    </div>
+
+    <!-- Logout -->
+    <div class="sidebar-logout">
+
+        <button type="button" id="sidebarLogout">
+            <span class="material-icons">logout</span>
+            <span>Logout</span>
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- Mobile Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="main-content">
+
+
+    <!-- =================================================
+         TOPBAR
+    ================================================== -->
+
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <button
+                type="button"
+                class="mobile-menu"
+                id="mobileMenu"
+                aria-label="Open menu"
+            >
+                <span class="material-icons">menu</span>
+            </button>
+
+            <h1>My Profile</h1>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <!-- Notifications -->
+            <button
+                type="button"
+                class="notification-btn"
+                title="Notifications"
+            >
+                <span class="material-icons">
+                    notifications_none
+                </span>
+
+                <span class="notification-dot"></span>
+            </button>
+
+
+            <!-- Profile -->
+            <div class="profile-wrapper">
+
+                <button
+                    type="button"
+                    class="profile-mini"
+                    id="profileMini"
+                >
+
+                    <span
+                        class="profile-avatar"
+                        id="topProfileAvatar"
+                    >
+                        F
+                    </span>
+
+                    <span
+                        class="profile-mini-name"
+                        id="topProfileName"
+                    >
+                        Felix
+                    </span>
+
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+
+                </button>
+
+
+                <!-- Dropdown -->
+                <div
+                    class="profile-dropdown"
+                    id="profileDropdown"
+                >
+
+                    <a href="profile.html">
+                        <span class="material-icons">
+                            person
+                        </span>
+                        My Profile
+                    </a>
+
+                    <a href="settings.html">
+                        <span class="material-icons">
+                            settings
+                        </span>
+                        Settings
+                    </a>
+
+                    <button
+                        type="button"
+                        id="dropdownLogout"
+                    >
+                        <span class="material-icons">
+                            logout
+                        </span>
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         PROFILE PAGE
+    ================================================== -->
+
+    <section class="profile-page">
+
+
+        <!-- Page Header -->
+        <div class="page-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    ACCOUNT
+                </span>
+
+                <h2>
+                    Profile Settings
+                </h2>
+
+                <p>
+                    Manage your personal information and professional profile.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Profile Layout -->
+        <div class="profile-layout">
+
+
+            <!-- =================================================
+                 LEFT COLUMN
+            ================================================== -->
+
+            <div class="profile-main">
+
+
+                <!-- Profile Card -->
+                <section class="profile-card profile-overview">
+
+                    <div class="profile-cover"></div>
+
+                    <div class="profile-overview-content">
+
+                        <!-- Avatar -->
+                        <div class="large-avatar-wrapper">
+
+                            <div
+                                class="large-avatar"
+                                id="profileAvatar"
+                            >
+                                F
+                            </div>
+
+                            <button
+                                type="button"
+                                class="change-photo-btn"
+                                id="changePhotoBtn"
+                                title="Change profile photo"
+                            >
+                                <span class="material-icons">
+                                    photo_camera
+                                </span>
+                            </button>
+
+                            <input
+                                type="file"
+                                id="profilePhotoInput"
+                                accept="image/*"
+                                hidden
+                            >
+
+                        </div>
+
+
+                        <div class="profile-overview-info">
+
+                            <h3 id="displayProfileName">
+                                Felix Odhiambo Otieno
+                            </h3>
+
+                            <p id="displayProfileTitle">
+                                Graphic Designer | Web Developer | ICT Specialist
+                            </p>
+
+                            <span class="profile-location">
+                                <span class="material-icons">
+                                    location_on
+                                </span>
+
+                                <span id="displayLocation">
+                                    Nairobi, Kenya
+                                </span>
+                            </span>
+
+                        </div>
+
+
+                        <div class="profile-status">
+
+                            <span class="status-dot"></span>
+
+                            Active
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Personal Information -->
+                <section class="profile-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Personal Information
+                            </h3>
+
+                            <p>
+                                Your basic personal and contact information.
+                            </p>
+
+                        </div>
+
+                        <span class="card-header-icon">
+                            <span class="material-icons">
+                                person_outline
+                            </span>
+                        </span>
+
+                    </div>
+
+
+                    <form id="personalInfoForm">
+
+                        <div class="form-grid">
+
+                            <!-- Full Name -->
+                            <div class="form-group">
+
+                                <label for="fullName">
+                                    Full Name
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        person
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        name="fullName"
+                                        value="Felix Odhiambo Otieno"
+                                        placeholder="Enter your full name"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Professional Title -->
+                            <div class="form-group">
+
+                                <label for="professionalTitle">
+                                    Professional Title
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        work_outline
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="professionalTitle"
+                                        name="professionalTitle"
+                                        value="Graphic Designer | Web Developer | ICT Specialist"
+                                        placeholder="e.g. Web Developer"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Email -->
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        email
+                                    </span>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value="imanhazir@gmail.com"
+                                        placeholder="you@example.com"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Phone -->
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        phone
+                                    </span>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        value="0757296340"
+                                        placeholder="Phone number"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Location -->
+                            <div class="form-group">
+
+                                <label for="location">
+                                    Location
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        location_on
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="location"
+                                        name="location"
+                                        value="Nairobi, Kenya"
+                                        placeholder="City, Country"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Website -->
+                            <div class="form-group">
+
+                                <label for="website">
+                                    Website
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        language
+                                    </span>
+
+                                    <input
+                                        type="url"
+                                        id="website"
+                                        name="website"
+                                        placeholder="https://yourwebsite.com"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                id="cancelPersonal"
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                <span class="material-icons">
+                                    save
+                                </span>
+
+                                Save Changes
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- Professional Profile -->
+                <section class="profile-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Professional Profile
+                            </h3>
+
+                            <p>
+                                Add information that helps employers understand your professional background.
+                            </p>
+
+                        </div>
+
+                        <span class="card-header-icon">
+                            <span class="material-icons">
+                                badge
+                            </span>
+                        </span>
+
+                    </div>
+
+
+                    <form id="professionalForm">
+
+                        <div class="form-group full-width">
+
+                            <label for="professionalSummary">
+                                Professional Summary
+                            </label>
+
+                            <textarea
+                                id="professionalSummary"
+                                name="professionalSummary"
+                                rows="6"
+                                placeholder="Write a short professional summary about yourself..."
+                            >Creative and motivated professional with experience in graphic design, web development, ICT services and digital solutions. Passionate about creating practical digital experiences, designing professional visual content and helping individuals and businesses use technology effectively.</textarea>
+
+                            <div class="textarea-footer">
+
+                                <span>
+                                    Recommended: 3–5 sentences
+                                </span>
+
+                                <span id="summaryCounter">
+                                    0 / 500
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="linkedin">
+                                    LinkedIn
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        link
+                                    </span>
+
+                                    <input
+                                        type="url"
+                                        id="linkedin"
+                                        name="linkedin"
+                                        placeholder="LinkedIn profile URL"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="whatsapp">
+                                    WhatsApp
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        chat
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="whatsapp"
+                                        name="whatsapp"
+                                        value="@imanhazir"
+                                        placeholder="WhatsApp username"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="facebook">
+                                    Facebook
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        public
+                                    </span>
+
+                                    <input
+                                        type="url"
+                                        id="facebook"
+                                        name="facebook"
+                                        placeholder="Facebook profile URL"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="instagram">
+                                    Instagram
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="material-icons">
+                                        photo_camera
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="instagram"
+                                        name="instagram"
+                                        placeholder="@username"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                <span class="material-icons">
+                                    save
+                                </span>
+
+                                Save Professional Profile
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- Skills -->
+                <section class="profile-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Skills
+                            </h3>
+
+                            <p>
+                                Add the skills you want to use across your CVs.
+                            </p>
+
+                        </div>
+
+                        <span class="card-header-icon">
+                            <span class="material-icons">
+                                psychology
+                            </span>
+                        </span>
+
+                    </div>
+
+
+                    <div class="skills-container" id="skillsContainer">
+
+                        <span class="skill-tag">
+                            HTML
+                            <button type="button">×</button>
+                        </span>
+
+                        <span class="skill-tag">
+                            CSS
+                            <button type="button">×</button>
+                        </span>
+
+                        <span class="skill-tag">
+                            JavaScript
+                            <button type="button">×</button>
+                        </span>
+
+                        <span class="skill-tag">
+                            Graphic Design
+                            <button type="button">×</button>
+                        </span>
+
+                        <span class="skill-tag">
+                            Canva
+                            <button type="button">×</button>
+                        </span>
+
+                        <span class="skill-tag">
+                            Data Analysis
+                            <button type="button">×</button>
+                        </span>
+
+                        <span class="skill-tag">
+                            AI
+                            <button type="button">×</button>
+                        </span>
+
+                    </div>
+
+
+                    <div class="add-skill-row">
+
+                        <input
+                            type="text"
+                            id="newSkill"
+                            placeholder="Add a skill..."
+                        >
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="addSkillBtn"
+                        >
+                            <span class="material-icons">
+                                add
+                            </span>
+
+                            Add Skill
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 RIGHT COLUMN
+            ================================================== -->
+
+            <aside class="profile-sidebar">
+
+
+                <!-- Account Card -->
+                <section class="profile-card account-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Account
+                            </h3>
+
+                            <p>
+                                Account information
+                            </p>
+
+                        </div>
+
+                        <span class="card-header-icon">
+                            <span class="material-icons">
+                                manage_accounts
+                            </span>
+                        </span>
+
+                    </div>
+
+
+                    <div class="account-item">
+
+                        <div class="account-icon">
+                            <span class="material-icons">
+                                email
+                            </span>
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+                            <strong id="accountEmail">
+                                imanhazir@gmail.com
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-item">
+
+                        <div class="account-icon">
+                            <span class="material-icons">
+                                calendar_today
+                            </span>
+                        </div>
+
+                        <div>
+                            <span>Member since</span>
+                            <strong id="memberSince">
+                                September 2026
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-item">
+
+                        <div class="account-icon">
+                            <span class="material-icons">
+                                verified
+                            </span>
+                        </div>
+
+                        <div>
+                            <span>Account status</span>
+                            <strong class="verified">
+                                Verified
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Profile Completion -->
+                <section class="profile-card completion-card">
+
+                    <div class="completion-top">
+
+                        <div>
+
+                            <h3>
+                                Profile Completion
+                            </h3>
+
+                            <p>
+                                Complete your profile to improve your CV.
+                            </p>
+
+                        </div>
+
+                        <strong id="completionPercentage">
+                            75%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-track">
+
+                        <div
+                            class="progress-value"
+                            id="profileProgress"
+                            style="width:75%;"
+                        ></div>
+
+                    </div>
+
+
+                    <ul class="completion-list">
+
+                        <li class="completed">
+                            <span class="material-icons">
+                                check_circle
+                            </span>
+                            Basic information
+                        </li>
+
+                        <li class="completed">
+                            <span class="material-icons">
+                                check_circle
+                            </span>
+                            Professional title
+                        </li>
+
+                        <li class="completed">
+                            <span class="material-icons">
+                                check_circle
+                            </span>
+                            Professional summary
+                        </li>
+
+                        <li>
+                            <span class="material-icons">
+                                radio_button_unchecked
+                            </span>
+                            Add social links
+                        </li>
+
+                        <li>
+                            <span class="material-icons">
+                                radio_button_unchecked
+                            </span>
+                            Upload profile photo
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- Quick Actions -->
+                <section class="profile-card quick-actions">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Quick Actions
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="create cv.html"
+                        class="quick-action"
+                    >
+                        <span class="quick-action-icon green">
+                            <span class="material-icons">
+                                add_circle
+                            </span>
+                        </span>
+
+                        <span>
+                            <strong>Create New CV</strong>
+                            <small>Start a new resume</small>
+                        </span>
+
+                        <span class="material-icons arrow">
+                            chevron_right
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="dashboard.html"
+                        class="quick-action"
+                    >
+                        <span class="quick-action-icon blue">
+                            <span class="material-icons">
+                                description
+                            </span>
+                        </span>
+
+                        <span>
+                            <strong>My CVs</strong>
+                            <small>Manage your resumes</small>
+                        </span>
+
+                        <span class="material-icons arrow">
+                            chevron_right
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="templates.html"
+                        class="quick-action"
+                    >
+                        <span class="quick-action-icon purple">
+                            <span class="material-icons">
+                                grid_view
+                            </span>
+                        </span>
+
+                        <span>
+                            <strong>Browse Templates</strong>
+                            <small>Find a new design</small>
+                        </span>
+
+                        <span class="material-icons arrow">
+                            chevron_right
+                        </span>
+                    </a>
+
+                </section>
+
+
+                <!-- Danger Zone -->
+                <section class="profile-card danger-card">
+
+                    <div class="danger-title">
+
+                        <span class="material-icons">
+                            warning
+                        </span>
+
+                        <h3>
+                            Danger Zone
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Permanently delete your CVBuilder account and all associated CV data.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="delete-account-btn"
+                        id="deleteAccountBtn"
+                    >
+                        Delete Account
+                    </button>
+
+                </section>
+
+
+            </aside>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="page-footer">
+
+            <span>
+                © <span id="currentYear"></span> CVBuilder. All rights reserved.
+            </span>
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Help
+                </a>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     SAVE NOTIFICATION
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span class="material-icons">
+        check_circle
+    </span>
+
+    <span id="toastMessage">
+        Changes saved successfully.
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     DELETE ACCOUNT MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="deleteModal"
+>
+
+    <div class="modal-box">
+
+        <div class="modal-icon danger">
+            <span class="material-icons">
+                delete_forever
+            </span>
+        </div>
+
+        <h3>
+            Delete your account?
+        </h3>
+
+        <p>
+            This action cannot be undone. Your account and associated CV data will be permanently deleted.
+        </p>
+
+        <div class="modal-actions">
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                id="cancelDelete"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-danger"
+                id="confirmDelete"
+            >
+                Delete Account
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =================================================
+       ELEMENTS
+    ================================================= */
+
+    const sidebar = document.getElementById("sidebar");
+    const sidebarOverlay = document.getElementById("sidebarOverlay");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    const profileMini = document.getElementById("profileMini");
+    const profileDropdown = document.getElementById("profileDropdown");
+
+    const sidebarLogout = document.getElementById("sidebarLogout");
+    const dropdownLogout = document.getElementById("dropdownLogout");
+
+    const profilePhotoInput =
+        document.getElementById("profilePhotoInput");
+
+    const changePhotoBtn =
+        document.getElementById("changePhotoBtn");
+
+    const profileAvatar =
+        document.getElementById("profileAvatar");
+
+    const topProfileAvatar =
+        document.getElementById("topProfileAvatar");
+
+    const fullName =
+        document.getElementById("fullName");
+
+    const displayProfileName =
+        document.getElementById("displayProfileName");
+
+    const topProfileName =
+        document.getElementById("topProfileName");
+
+    const professionalTitle =
+        document.getElementById("professionalTitle");
+
+    const displayProfileTitle =
+        document.getElementById("displayProfileTitle");
+
+    const locationInput =
+        document.getElementById("location");
+
+    const displayLocation =
+        document.getElementById("displayLocation");
+
+    const personalInfoForm =
+        document.getElementById("personalInfoForm");
+
+    const professionalForm =
+        document.getElementById("professionalForm");
+
+    const toast =
+        document.getElementById("toast");
+
+    const toastMessage =
+        document.getElementById("toastMessage");
+
+    const deleteModal =
+        document.getElementById("deleteModal");
+
+    const deleteAccountBtn =
+        document.getElementById("deleteAccountBtn");
+
+    const cancelDelete =
+        document.getElementById("cancelDelete");
+
+    const confirmDelete =
+        document.getElementById("confirmDelete");
+
+    const newSkill =
+        document.getElementById("newSkill");
+
+    const addSkillBtn =
+        document.getElementById("addSkillBtn");
+
+    const skillsContainer =
+        document.getElementById("skillsContainer");
+
+    const summary =
+        document.getElementById("professionalSummary");
+
+    const summaryCounter =
+        document.getElementById("summaryCounter");
+
+
+    /* =================================================
+       LOAD USER FROM LOCAL STORAGE
+    ================================================= */
+
+    let storedUser = null;
+
+    try {
+
+        storedUser =
+            JSON.parse(
+                localStorage.getItem("cvbuilder_user")
+            );
+
+    } catch (error) {
+
+        storedUser = null;
+
+    }
+
+
+    if (storedUser) {
+
+        const name =
+            storedUser.full_name ||
+            storedUser.name ||
+            "";
+
+        if (name) {
+
+            fullName.value = name;
+
+            displayProfileName.textContent = name;
+
+            topProfileName.textContent =
+                name.split(" ")[0];
+
+            const initials =
+                name
+                    .split(" ")
+                    .map(word => word.charAt(0))
+                    .slice(0, 2)
+                    .join("")
+                    .toUpperCase();
+
+            profileAvatar.textContent = initials || "U";
+            topProfileAvatar.textContent = initials || "U";
+        }
+
+        if (storedUser.email) {
+
+            document.getElementById("email").value =
+                storedUser.email;
+
+            document.getElementById("accountEmail")
+                .textContent =
+                storedUser.email;
+        }
+
+    }
+
+
+    /* =================================================
+       MOBILE SIDEBAR
+    ================================================= */
+
+    mobileMenu.addEventListener("click", () => {
+
+        sidebar.classList.add("open");
+        sidebarOverlay.classList.add("show");
+
+    });
+
+
+    sidebarOverlay.addEventListener("click", () => {
+
+        sidebar.classList.remove("open");
+        sidebarOverlay.classList.remove("show");
+
+    });
+
+
+    /* =================================================
+       PROFILE DROPDOWN
+    ================================================= */
+
+    profileMini.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        profileDropdown.classList.toggle("show");
+
+    });
+
+
+    document.addEventListener("click", () => {
+
+        profileDropdown.classList.remove("show");
+
+    });
+
+
+    profileDropdown.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+    });
+
+
+    /* =================================================
+       PROFILE PHOTO
+    ================================================= */
+
+    changePhotoBtn.addEventListener("click", () => {
+
+        profilePhotoInput.click();
+
+    });
+
+
+    profilePhotoInput.addEventListener("change", (event) => {
+
+        const file = event.target.files[0];
+
+        if (!file) return;
+
+        if (!file.type.startsWith("image/")) {
+
+            showToast("Please select an image file.");
+
+            return;
+
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+
+            profileAvatar.style.backgroundImage =
+                `url("${e.target.result}")`;
+
+            profileAvatar.style.backgroundSize =
+                "cover";
+
+            profileAvatar.style.backgroundPosition =
+                "center";
+
+            profileAvatar.textContent = "";
+
+            localStorage.setItem(
+                "cvbuilder_profile_photo",
+                e.target.result
+            );
+
+            showToast(
+                "Profile photo updated successfully."
+            );
+
+        };
+
+        reader.readAsDataURL(file);
+
+    });
+
+
+    /* Restore profile photo */
+
+    const savedPhoto =
+        localStorage.getItem(
+            "cvbuilder_profile_photo"
+        );
+
+    if (savedPhoto) {
+
+        profileAvatar.style.backgroundImage =
+            `url("${savedPhoto}")`;
+
+        profileAvatar.style.backgroundSize =
+            "cover";
+
+        profileAvatar.style.backgroundPosition =
+            "center";
+
+        profileAvatar.textContent = "";
+
+    }
+
+
+    /* =================================================
+       UPDATE PROFILE NAME LIVE
+    ================================================= */
+
+    fullName.addEventListener("input", () => {
+
+        const value =
+            fullName.value.trim();
+
+        displayProfileName.textContent =
+            value || "Your Name";
+
+        topProfileName.textContent =
+            value.split(" ")[0] || "User";
+
+        const initials =
+            value
+                .split(" ")
+                .filter(Boolean)
+                .map(word => word.charAt(0))
+                .slice(0, 2)
+                .join("")
+                .toUpperCase();
+
+        if (
+            !profileAvatar.style.backgroundImage
+        ) {
+
+            profileAvatar.textContent =
+                initials || "U";
+
+        }
+
+        topProfileAvatar.textContent =
+            initials || "U";
+
+    });
+
+
+    professionalTitle.addEventListener(
+        "input",
+        () => {
+
+            displayProfileTitle.textContent =
+                professionalTitle.value.trim() ||
+                "Professional Title";
+
+        }
+    );
+
+
+    locationInput.addEventListener(
+        "input",
+        () => {
+
+            displayLocation.textContent =
+                locationInput.value.trim() ||
+                "Location";
+
+        }
+    );
+
+
+    /* =================================================
+       PERSONAL FORM
+    ================================================= */
+
+    personalInfoForm.addEventListener(
+        "submit",
+        (event) => {
+
+            event.preventDefault();
+
+            const user = {
+
+                full_name:
+                    fullName.value.trim(),
+
+                email:
+                    document.getElementById("email")
+                        .value.trim(),
+
+                phone:
+                    document.getElementById("phone")
+                        .value.trim()
+
+            };
+
+            localStorage.setItem(
+                "cvbuilder_user",
+                JSON.stringify(user)
+            );
+
+            showToast(
+                "Personal information saved."
+            );
+
+        }
+    );
+
+
+    /* =================================================
+       PROFESSIONAL FORM
+    ================================================= */
+
+    professionalForm.addEventListener(
+        "submit",
+        (event) => {
+
+            event.preventDefault();
+
+            const professionalData = {
+
+                title:
+                    professionalTitle.value.trim(),
+
+                summary:
+                    summary.value.trim(),
+
+                linkedin:
+                    document.getElementById("linkedin")
+                        .value.trim(),
+
+                whatsapp:
+                    document.getElementById("whatsapp")
+                        .value.trim(),
+
+                facebook:
+                    document.getElementById("facebook")
+                        .value.trim(),
+
+                instagram:
+                    document.getElementById("instagram")
+                        .value.trim()
+
+            };
+
+            localStorage.setItem(
+                "cvbuilder_professional",
+                JSON.stringify(
+                    professionalData
+                )
+            );
+
+            showToast(
+                "Professional profile saved."
+            );
+
+        }
+    );
+
+
+    /* =================================================
+       SUMMARY COUNTER
+    ================================================= */
+
+    function updateSummaryCounter() {
+
+        const length =
+            summary.value.length;
+
+        summaryCounter.textContent =
+            `${length} / 500`;
+
+        if (length > 500) {
+
+            summaryCounter.style.color =
+                "#dc2626";
+
+        } else {
+
+            summaryCounter.style.color =
+                "";
+
+        }
+
+    }
+
+    summary.addEventListener(
+        "input",
+        updateSummaryCounter
+    );
+
+    updateSummaryCounter();
+
+
+    /* =================================================
+       SKILLS
+    ================================================= */
+
+    function attachSkillDelete(button) {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                button.parentElement.remove();
+
+                saveSkills();
+
+                showToast(
+                    "Skill removed."
+                );
+
+            }
+        );
+
+    }
+
+
+    document
+        .querySelectorAll(".skill-tag button")
+        .forEach(button => {
+
+            attachSkillDelete(button);
+
+        });
+
+
+    addSkillBtn.addEventListener(
+        "click",
+        addSkill
+    );
+
+
+    newSkill.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (event.key === "Enter") {
+
+                event.preventDefault();
+
+                addSkill();
+
+            }
+
+        }
+    );
+
+
+    function addSkill() {
+
+        const value =
+            newSkill.value.trim();
+
+        if (!value) return;
+
+        const tag =
+            document.createElement("span");
+
+        tag.className =
+            "skill-tag";
+
+        tag.innerHTML = `
+            ${escapeHtml(value)}
+            <button type="button">×</button>
+        `;
+
+        skillsContainer.appendChild(tag);
+
+        attachSkillDelete(
+            tag.querySelector("button")
+        );
+
+        newSkill.value = "";
+
+        saveSkills();
+
+        showToast(
+            "Skill added."
+        );
+
+    }
+
+
+    function saveSkills() {
+
+        const skills =
+            Array.from(
+                document.querySelectorAll(
+                    ".skill-tag"
+                )
+            ).map(tag => {
+
+                return tag.textContent
+                    .replace("×", "")
+                    .trim();
+
+            });
+
+        localStorage.setItem(
+            "cvbuilder_skills",
+            JSON.stringify(skills)
+        );
+
+    }
+
+
+    /* =================================================
+       DELETE ACCOUNT MODAL
+    ================================================= */
+
+    deleteAccountBtn.addEventListener(
+        "click",
+        () => {
+
+            deleteModal.classList.add("show");
+
+        }
+    );
+
+
+    cancelDelete.addEventListener(
+        "click",
+        () => {
+
+            deleteModal.classList.remove("show");
+
+        }
+    );
+
+
+    deleteModal.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                event.target === deleteModal
+            ) {
+
+                deleteModal.classList.remove(
+                    "show"
+                );
+
+            }
+
+        }
+    );
+
+
+    confirmDelete.addEventListener(
+        "click",
+        () => {
+
+            /*
+             * Frontend demo only.
+             * Replace this with a Google Apps Script
+             * backend delete request.
+             */
+
+            localStorage.removeItem(
+                "cvbuilder_user"
+            );
+
+            localStorage.removeItem(
+                "cvbuilder_profile_photo"
+            );
+
+            localStorage.removeItem(
+                "cvbuilder_professional"
+            );
+
+            localStorage.removeItem(
+                "cvbuilder_skills"
+            );
+
+            localStorage.removeItem(
+                "current_cv"
+            );
+
+            window.location.href =
+                "login.html";
+
+        }
+    );
+
+
+    /* =================================================
+       LOGOUT
+    ================================================= */
+
+    function logout() {
+
+        localStorage.removeItem(
+            "cvbuilder_user"
+        );
+
+        localStorage.removeItem(
+            "current_cv"
+        );
+
+        window.location.href =
+            "login.html";
+
+    }
+
+
+    sidebarLogout.addEventListener(
+        "click",
+        logout
+    );
+
+    dropdownLogout.addEventListener(
+        "click",
+        logout
+    );
+
+
+    /* =================================================
+       TOAST
+    ================================================= */
+
+    let toastTimer;
+
+    function showToast(message) {
+
+        toastMessage.textContent =
+            message;
+
+        toast.classList.add("show");
+
+        clearTimeout(toastTimer);
+
+        toastTimer =
+            setTimeout(() => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            }, 3000);
+
+    }
+
+
+    /* =================================================
+       HTML ESCAPE
+    ================================================= */
+
+    function escapeHtml(value) {
+
+        const div =
+            document.createElement("div");
+
+        div.textContent = value;
+
+        return div.innerHTML;
+
+    }
+
+
+    /* =================================================
+       CURRENT YEAR
+    ================================================= */
+
+    document.getElementById(
+        "currentYear"
+    ).textContent =
+        new Date().getFullYear();
+
+});
+
+</script>
+<script src="auth.js"></script>
+</body>
+</html>
+```
