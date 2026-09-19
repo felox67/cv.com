@@ -84,7 +84,6 @@
   const nl = v =>
     esc(v).replace(/\r?\n/g, '<br>');
 
-
   /* =========================================================
      LOCAL STORAGE
   ========================================================= */
@@ -98,7 +97,6 @@
       return {};
     }
   }
-
 
   /* =========================================================
      DEFAULT DATA
@@ -172,7 +170,6 @@
     };
   }
 
-
   /* =========================================================
      MERGE SAVED DATA WITH DEFAULT DATA
   ========================================================= */
@@ -213,11 +210,9 @@
     return a;
   }
 
-
   let data = defaults();
 
   const cvId = data.cv_id;
-
 
   /* =========================================================
      A4 PREVIEW STYLES
@@ -252,7 +247,6 @@
         box-sizing: border-box;
       }
 
-
       /* -----------------------------------------
          A4 PAGE CONTAINER
       ----------------------------------------- */
@@ -278,7 +272,6 @@
         transform-origin: top center;
 
       }
-
 
       /* -----------------------------------------
          INDIVIDUAL A4 PAGE
@@ -323,7 +316,6 @@
 
       }
 
-
       /* -----------------------------------------
          CONTENT AREA OF EACH A4 PAGE
       ----------------------------------------- */
@@ -339,7 +331,6 @@
         box-sizing: border-box;
 
       }
-
 
       /* -----------------------------------------
          CV HEADER
@@ -358,7 +349,6 @@
           var(--cv-primary, #15803d);
 
       }
-
 
       .cv-photo {
 
@@ -380,7 +370,6 @@
 
       }
 
-
       .cv-name {
 
         margin:
@@ -400,7 +389,6 @@
 
       }
 
-
       .cv-title {
 
         font-size:
@@ -413,7 +401,6 @@
           3mm;
 
       }
-
 
       .cv-contact {
 
@@ -437,7 +424,6 @@
 
       }
 
-
       /* -----------------------------------------
          SECTIONS
       ----------------------------------------- */
@@ -451,7 +437,6 @@
           avoid;
 
       }
-
 
       .cv-section h3 {
 
@@ -478,7 +463,6 @@
 
       }
 
-
       /* -----------------------------------------
          TEXT
       ----------------------------------------- */
@@ -496,7 +480,6 @@
 
       }
 
-
       /* -----------------------------------------
          ENTRIES
       ----------------------------------------- */
@@ -511,14 +494,12 @@
 
       }
 
-
       .cv-entry:last-child {
 
         margin-bottom:
           0;
 
       }
-
 
       .cv-entry-head {
 
@@ -536,7 +517,6 @@
 
       }
 
-
       .cv-entry-title {
 
         font-size:
@@ -546,7 +526,6 @@
           800;
 
       }
-
 
       .cv-entry-meta {
 
@@ -564,7 +543,6 @@
 
       }
 
-
       .cv-entry-org {
 
         color:
@@ -581,7 +559,6 @@
 
       }
 
-
       .cv-entry-location {
 
         color:
@@ -595,14 +572,12 @@
 
       }
 
-
       .cv-entry-description {
 
         margin-top:
           1.5mm;
 
       }
-
 
       .cv-link {
 
@@ -613,7 +588,6 @@
           break-all;
 
       }
-
 
       /* -----------------------------------------
          SKILLS
@@ -631,7 +605,6 @@
           2mm;
 
       }
-
 
       .cv-skill {
 
@@ -658,7 +631,6 @@
 
       }
 
-
       /* -----------------------------------------
          LANGUAGES
       ----------------------------------------- */
@@ -678,7 +650,6 @@
           3mm 8mm;
 
       }
-
 
       .cv-language {
 
@@ -702,14 +673,12 @@
 
       }
 
-
       .cv-language span {
 
         color:
           #666666;
 
       }
-
 
       /* -----------------------------------------
          REFEREES
@@ -731,7 +700,6 @@
 
       }
 
-
       .cv-referee {
 
         padding:
@@ -744,7 +712,6 @@
           2mm;
 
       }
-
 
       /* -----------------------------------------
          DATE DROPDOWN
@@ -778,7 +745,6 @@
 
       }
 
-
       .date-month-year:focus {
 
         outline:
@@ -797,7 +763,6 @@
           );
 
       }
-
 
       /* -----------------------------------------
          PAGE FOOTER
@@ -834,7 +799,6 @@
 
       }
 
-
       /* -----------------------------------------
          PRINT / PDF
       ----------------------------------------- */
@@ -848,7 +812,6 @@
           0;
 
       }
-
 
       @media print {
 
@@ -866,14 +829,12 @@
 
         }
 
-
         body * {
 
           visibility:
             hidden !important;
 
         }
-
 
         #cvPages,
         #cvPages * {
@@ -882,7 +843,6 @@
             visible !important;
 
         }
-
 
         #cvPages {
 
@@ -906,7 +866,6 @@
 
         }
 
-
         .preview-scroll {
 
           overflow:
@@ -916,7 +875,6 @@
             0 !important;
 
         }
-
 
         .cv-page {
 
@@ -946,7 +904,6 @@
 
         }
 
-
         .cv-page:last-child {
 
           page-break-after:
@@ -963,7 +920,6 @@
 
     document.head.appendChild(style);
   }
-
 
   /* =========================================================
      LOAD SAVED DATA
@@ -999,7 +955,6 @@
 
     }
 
-
     const title =
       $('#cvTitle');
 
@@ -1010,7 +965,6 @@
         'My Professional CV';
 
     }
-
 
     setAppearance();
 
@@ -1023,7 +977,6 @@
     loadAccount();
 
   }
-
 
   /* =========================================================
      COLLECT REPEATABLE DATA
@@ -1049,7 +1002,6 @@
             uid('item')
         };
 
-
         Object.entries(
           selectors
         ).forEach(
@@ -1073,7 +1025,6 @@
           }
         );
 
-
         return o;
 
       })
@@ -1089,7 +1040,6 @@
 
   }
 
-
   /* =========================================================
      COLLECT ALL FORM DATA
   ========================================================= */
@@ -1099,7 +1049,6 @@
     data.cv_title =
       text('#cvTitle') ||
       'My Professional CV';
-
 
     data.personal = {
 
@@ -1129,18 +1078,14 @@
 
     };
 
-
     data.summary =
       text('#summary');
-
 
     data.interests =
       text('#interests');
 
-
     data.refereesOnRequest =
       !!$('#refereesOnRequest')?.checked;
-
 
     data.experience =
       collectRepeat(
@@ -1169,7 +1114,6 @@
         }
       );
 
-
     data.education =
       collectRepeat(
         '#educationList',
@@ -1194,7 +1138,6 @@
         }
       );
 
-
     data.achievements =
       collectRepeat(
         '#achievementList',
@@ -1212,7 +1155,6 @@
             '.achievement-description'
         }
       );
-
 
     data.volunteer =
       collectRepeat(
@@ -1241,7 +1183,6 @@
         }
       );
 
-
     data.memberships =
       collectRepeat(
         '#membershipList',
@@ -1259,7 +1200,6 @@
             '.membership-description'
         }
       );
-
 
     data.certifications =
       collectRepeat(
@@ -1282,7 +1222,6 @@
         }
       );
 
-
     data.projects =
       collectRepeat(
         '#projectList',
@@ -1303,7 +1242,6 @@
             '.project-description'
         }
       );
-
 
     data.publications =
       collectRepeat(
@@ -1326,7 +1264,6 @@
         }
       );
 
-
     data.languages =
       collectRepeat(
         '#languageList',
@@ -1338,7 +1275,6 @@
             '.language-level'
         }
       );
-
 
     data.referees =
       collectRepeat(
@@ -1361,11 +1297,9 @@
         }
       );
 
-
     return data;
 
   }
-
 
   /* =========================================================
      MONTH + YEAR OPTIONS
@@ -1403,22 +1337,17 @@
 
     ];
 
-
     const currentYear =
       new Date().getFullYear();
-
 
     const firstYear =
       1950;
 
-
     const lastYear =
       currentYear + 10;
 
-
     let html =
       '<option value="">Select month and year</option>';
-
 
     for (
       let year = lastYear;
@@ -1429,7 +1358,6 @@
       html +=
         `<optgroup label="${year}">`;
 
-
       for (
         let month = 12;
         month >= 1;
@@ -1438,7 +1366,6 @@
 
         const value =
           `${year}-${String(month).padStart(2, '0')}`;
-
 
         html +=
           `<option value="${value}" ${
@@ -1449,17 +1376,14 @@
 
       }
 
-
       html +=
         '</optgroup>';
 
     }
 
-
     return html;
 
   }
-
 
   /* =========================================================
      INPUT GENERATOR
@@ -1503,7 +1427,6 @@
 
     }
 
-
     return `
 
       <div class="form-group">
@@ -1524,7 +1447,6 @@
     `;
 
   }
-
 
   /* =========================================================
      TEXTAREA GENERATOR
@@ -1557,7 +1479,6 @@
 
   }
 
-
   /* =========================================================
      REPEATABLE CARD
   ========================================================= */
@@ -1573,15 +1494,12 @@
     const el =
       document.createElement('div');
 
-
     el.className =
       `form-card repeatable-card ${type}-item`;
-
 
     el.dataset.id =
       x.id ||
       uid(type);
-
 
     el.innerHTML = `
 
@@ -1603,7 +1521,6 @@
 
         </div>
 
-
         <button
           type="button"
           class="delete-item-btn"
@@ -1621,11 +1538,9 @@
 
     `;
 
-
     return el;
 
   }
-
 
   /* =========================================================
      FORM BUILDERS
@@ -1685,7 +1600,6 @@
 
       </div>
 
-
       <label class="checkbox-row">
 
         <input
@@ -1698,7 +1612,6 @@
 
       </label>
 
-
       ${ta(
         'experience-description',
         'Description',
@@ -1708,7 +1621,6 @@
 
       `
     ),
-
 
     education: (
       x,
@@ -1762,7 +1674,6 @@
 
       </div>
 
-
       ${ta(
         'education-description',
         'Description',
@@ -1772,7 +1683,6 @@
 
       `
     ),
-
 
     achievement: (
       x,
@@ -1810,7 +1720,6 @@
 
       </div>
 
-
       ${ta(
         'achievement-description',
         'Details',
@@ -1820,7 +1729,6 @@
 
       `
     ),
-
 
     volunteer: (
       x,
@@ -1881,7 +1789,6 @@
 
       </div>
 
-
       ${ta(
         'volunteer-description',
         'Description',
@@ -1891,7 +1798,6 @@
 
       `
     ),
-
 
     membership: (
       x,
@@ -1929,7 +1835,6 @@
 
       </div>
 
-
       ${ta(
         'membership-description',
         'Details',
@@ -1939,7 +1844,6 @@
 
       `
     ),
-
 
     certification: (
       x,
@@ -1984,7 +1888,6 @@
 
       </div>
 
-
       ${ta(
         'certification-description',
         'Details',
@@ -1994,7 +1897,6 @@
 
       `
     ),
-
 
     project: (
       x,
@@ -2040,7 +1942,6 @@
 
       </div>
 
-
       ${ta(
         'project-description',
         'Description',
@@ -2050,7 +1951,6 @@
 
       `
     ),
-
 
     publication: (
       x,
@@ -2096,7 +1996,6 @@
 
       </div>
 
-
       ${ta(
         'publication-description',
         'Description',
@@ -2106,7 +2005,6 @@
 
       `
     ),
-
 
     language: (
       x,
@@ -2127,7 +2025,6 @@
           x.name,
           'e.g. English'
         )}
-
 
         <div class="form-group">
 
@@ -2168,7 +2065,6 @@
 
       `
     ),
-
 
     referee: (
       x,
@@ -2226,7 +2122,6 @@
 
   };
 
-
   /* =========================================================
      CONTAINERS
   ========================================================= */
@@ -2265,7 +2160,6 @@
 
   };
 
-
   const arrays = {
 
     experience:
@@ -2300,7 +2194,6 @@
 
   };
 
-
   /* =========================================================
      POPULATE FORM
   ========================================================= */
@@ -2309,7 +2202,6 @@
 
     const p =
       data.personal || {};
-
 
     [
       'fullName',
@@ -2333,14 +2225,12 @@
       }
     );
 
-
     if ($('#summary')) {
 
       $('#summary').value =
         data.summary || '';
 
     }
-
 
     if ($('#interests')) {
 
@@ -2349,14 +2239,12 @@
 
     }
 
-
     if ($('#refereesOnRequest')) {
 
       $('#refereesOnRequest').checked =
         !!data.refereesOnRequest;
 
     }
-
 
     Object.keys(
       containers
@@ -2370,10 +2258,8 @@
           return;
         }
 
-
         box.innerHTML =
           '';
-
 
         (
           data[
@@ -2392,7 +2278,6 @@
       }
     );
 
-
     if (
       !data.experience.length
     ) {
@@ -2401,7 +2286,6 @@
 
     }
 
-
     if (
       !data.education.length
     ) {
@@ -2409,7 +2293,6 @@
       add('education');
 
     }
-
 
     renderSkills();
 
@@ -2420,7 +2303,6 @@
     counter();
 
   }
-
 
   /* =========================================================
      ADD ITEM
@@ -2435,12 +2317,10 @@
       return;
     }
 
-
     const x = {
       id:
         uid(type)
     };
-
 
     box.appendChild(
       builders[type](
@@ -2449,7 +2329,6 @@
       )
     );
 
-
     bindDeletes();
 
     renumber();
@@ -2457,7 +2336,6 @@
     schedule();
 
   }
-
 
   /* =========================================================
      DELETE BUTTONS
@@ -2477,10 +2355,8 @@
 
           }
 
-
           button.dataset.bound =
             '1';
-
 
           button.onclick =
             () => {
@@ -2490,7 +2366,6 @@
                   '.repeatable-card'
                 )
                 ?.remove();
-
 
               renumber();
 
@@ -2504,7 +2379,6 @@
       );
 
   }
-
 
   /* =========================================================
      NUMBER REPEATABLE CARDS
@@ -2543,7 +2417,6 @@
 
   }
 
-
   /* =========================================================
      SKILLS
   ========================================================= */
@@ -2557,10 +2430,8 @@
       return;
     }
 
-
     box.innerHTML =
       '';
-
 
     (
       data.skills || []
@@ -2570,10 +2441,8 @@
         const el =
           document.createElement('div');
 
-
         el.className =
           'skill-tag';
-
 
         el.innerHTML = `
 
@@ -2593,10 +2462,8 @@
 
         `;
 
-
         const button =
           $('button', el);
-
 
         button.onclick =
           () => {
@@ -2612,14 +2479,12 @@
 
           };
 
-
         box.appendChild(el);
 
       }
     );
 
   }
-
 
   function addSkill() {
 
@@ -2629,7 +2494,6 @@
     if (!n) {
       return;
     }
-
 
     data.skills.push({
 
@@ -2644,7 +2508,6 @@
 
     });
 
-
     if ($('#skillInput')) {
 
       $('#skillInput').value =
@@ -2652,13 +2515,11 @@
 
     }
 
-
     render();
 
     schedule();
 
   }
-
 
   /* =========================================================
      PHOTO
@@ -2672,7 +2533,6 @@
     if (!box) {
       return;
     }
-
 
     box.innerHTML =
       data.photo
@@ -2688,7 +2548,6 @@
 
   }
 
-
   /* =========================================================
      APPEARANCE
   ========================================================= */
@@ -2703,7 +2562,6 @@
         '#15803d'
       );
 
-
     document.documentElement
       .style
       .setProperty(
@@ -2712,7 +2570,6 @@
       );
 
   }
-
 
   /* =========================================================
      DATE FORMATTING
@@ -2724,13 +2581,11 @@
       return '';
     }
 
-
     const [
       y,
       m
     ] =
       String(d).split('-');
-
 
     const months = [
 
@@ -2749,7 +2604,6 @@
 
     ];
 
-
     return (
       y &&
       m
@@ -2762,7 +2616,6 @@
       : d;
 
   }
-
 
   function range(
     a,
@@ -2778,7 +2631,6 @@
         ? 'Present'
         : fmt(b);
 
-
     return (
       x &&
       y
@@ -2793,7 +2645,6 @@
         );
 
   }
-
 
   /* =========================================================
      CV SECTION
@@ -2825,7 +2676,6 @@
       : '';
 
   }
-
 
   /* =========================================================
      CV ENTRY
@@ -2864,7 +2714,6 @@
 
         </div>
 
-
         ${
           org
 
@@ -2876,7 +2725,6 @@
 
             : ''
         }
-
 
         ${
           loc
@@ -2890,7 +2738,6 @@
             : ''
         }
 
-
         ${
           desc
 
@@ -2902,7 +2749,6 @@
 
             : ''
         }
-
 
         ${
           link
@@ -2931,7 +2777,6 @@
 
   }
 
-
   /* =========================================================
      BUILD CV CONTENT
   ========================================================= */
@@ -2940,7 +2785,6 @@
 
     const p =
       data.personal || {};
-
 
     let h = `
 
@@ -2960,7 +2804,6 @@
             : ''
         }
 
-
         <h1
           class="cv-name"
         >
@@ -2969,7 +2812,6 @@
             'Your Name'
           )}
         </h1>
-
 
         ${
           p.professionalTitle
@@ -2984,7 +2826,6 @@
 
             : ''
         }
-
 
         <div
           class="cv-contact"
@@ -3018,7 +2859,6 @@
 
     `;
 
-
     /* SUMMARY */
 
     if (data.summary) {
@@ -3038,7 +2878,6 @@
       );
 
     }
-
 
     /* WORK EXPERIENCE */
 
@@ -3073,7 +2912,6 @@
 
     }
 
-
     /* EDUCATION */
 
     if (
@@ -3105,7 +2943,6 @@
       );
 
     }
-
 
     /* SKILLS */
 
@@ -3158,7 +2995,6 @@
 
     }
 
-
     /* ACHIEVEMENTS */
 
     if (
@@ -3187,7 +3023,6 @@
       );
 
     }
-
 
     /* VOLUNTEER / ATTACHMENTS / INTERNSHIPS */
 
@@ -3226,7 +3061,6 @@
 
     }
 
-
     /* MEMBERSHIPS */
 
     if (
@@ -3256,7 +3090,6 @@
 
     }
 
-
     /* CERTIFICATIONS */
 
     if (
@@ -3285,7 +3118,6 @@
       );
 
     }
-
 
     /* PROJECTS */
 
@@ -3317,7 +3149,6 @@
 
     }
 
-
     /* PUBLICATIONS */
 
     if (
@@ -3347,7 +3178,6 @@
       );
 
     }
-
 
     /* LANGUAGES */
 
@@ -3396,7 +3226,6 @@
 
     }
 
-
     /* HOBBIES */
 
     if (data.interests) {
@@ -3435,7 +3264,6 @@
       );
 
     }
-
 
     /* REFEREES */
 
@@ -3530,11 +3358,9 @@
 
     }
 
-
     return h;
 
   }
-
 
   /* =========================================================
      CONVERT MILLIMETERS TO PIXELS
@@ -3547,7 +3373,6 @@
         'div'
       );
 
-
     d.style.cssText =
       `
         position:absolute;
@@ -3555,22 +3380,17 @@
         width:${mm}mm;
       `;
 
-
     document.body.appendChild(d);
-
 
     const n =
       d.getBoundingClientRect()
         .width;
 
-
     d.remove();
-
 
     return n;
 
   }
-
 
   /* =========================================================
      CREATE EMPTY A4 PAGE
@@ -3583,10 +3403,8 @@
         'div'
       );
 
-
     p.className =
       'cv-page';
-
 
     p.innerHTML =
       `
@@ -3595,298 +3413,259 @@
         ></div>
       `;
 
-
     return p;
 
   }
 
-
   /* =========================================================
-     RENDER A4 PAGES
-
-     IMPORTANT:
-
-     This creates as many A4 pages as necessary.
-
-     1 page
-     2 pages
-     3 pages
-     4 pages
-     5 pages
-     ...
-     unlimited
+     OUTPUT STYLES (preview overlay + isolated print root)
   ========================================================= */
-
-  function render() {
-
-    /* Make sure A4 styles exist */
-
-    injectCVStyles();
-
-
-    /* Collect latest form information */
-
-    collect();
-
-
-    setAppearance();
-
-
-    renderSkills();
-
-
-    updateCompletion();
-
-
-    counter();
-
-
-    const root =
-      $('#cvPages');
-
-
-    if (!root) {
-
-      console.error(
-        'cvPages container not found.'
-      );
-
-      return;
-
-    }
-
-
-    /* Remove previous pages */
-
-    root.innerHTML =
-      '';
-
-
-    /*
-      Create a hidden source container.
-
-      The content is measured before being divided
-      into A4 pages.
-    */
-
-    const source =
-      document.createElement(
-        'div'
-      );
-
-
-    source.style.cssText = `
-
-      position:absolute;
-
-      visibility:hidden;
-
-      left:-100000px;
-
-      top:0;
-
-      width:178mm;
-
-      box-sizing:border-box;
-
-    `;
-
-
-    source.innerHTML =
-      content();
-
-
-    document.body.appendChild(
-      source
-    );
-
-
-    /*
-      A4 usable content height.
-
-      A4 = 297mm high.
-
-      We reserve space for:
-
-      top margin
-      bottom margin
-      footer
-
-      leaving approximately 266mm
-      for actual CV content.
-    */
-
-    const limit =
-      mmPx(266);
-
-
-    /*
-      Start page 1
-    */
-
-    let currentPage =
-      page();
-
-
-    root.appendChild(
-      currentPage
-    );
-
-
-    let body =
-      $('.cv-page-content',
-        currentPage
-      );
-
-
-    /*
-      Move each CV block to a page.
-
-      If adding a block makes the page too tall,
-      the block is moved to a new A4 page.
-    */
-
-    [
-      ...source.children
-    ].forEach(
-      node => {
-
-        const clone =
-          node.cloneNode(true);
-
-
-        body.appendChild(
-          clone
-        );
-
-
-        /*
-          Check whether the page has become
-          too tall.
-        */
-
-        if (
-          body.scrollHeight >
-          limit
-        ) {
-
-          /*
-            If the page already contains content,
-            move this block to a new page.
-          */
-
-          if (
-            body.children.length >
-            1
-          ) {
-
-            body.removeChild(
-              body.lastElementChild
-            );
-
-
-            currentPage =
-              page();
-
-
-            root.appendChild(
-              currentPage
-            );
-
-
-            body =
-              $('.cv-page-content',
-                currentPage
-              );
-
-
-            body.appendChild(
-              node.cloneNode(true)
-            );
-
-          }
-
-        }
-
-      }
-    );
-
-
-    /*
-      Remove hidden measuring source.
-    */
-
-    source.remove();
-
-
-    /*
-      Add page numbers.
-
-      Example:
-
-      Page 1 of 4
-      Page 2 of 4
-      Page 3 of 4
-      Page 4 of 4
-    */
-
-    const pages =
-      $$('.cv-page', root);
-
-
-    pages.forEach(
-      (p, i) => {
-
-        const footer =
-          document.createElement(
-            'div'
-          );
-
-
-        footer.className =
-          'cv-page-footer';
-
-
-        footer.textContent =
-          `Page ${
-            i + 1
-          } of ${
-            pages.length
-          }`;
-
-
-        p.appendChild(
-          footer
-        );
-
-      }
-    );
-
-
-    /*
-      Update page count at the top.
-    */
-
-    const countLabel =
-      $('#pageCountLabel');
-
-
-    if (countLabel) {
-
-      countLabel.textContent =
-        `${pages.length} page${
-          pages.length === 1
-            ? ''
-            : 's'
-        }`;
-
-    }
-
-
-    applyZoom();
-
+  function injectOutputStyles() {
+    if ($('#cvOutputStyles')) return;
+    const s = document.createElement('style');
+    s.id = 'cvOutputStyles';
+    s.textContent = `
+      #cvPreviewOverlay{position:fixed;inset:0;z-index:99999;background:#e9ece9;display:flex;flex-direction:column;font-family:Inter,Arial,sans-serif}
+      #cvPreviewOverlay .pv-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:#fff;border-bottom:1px solid #d9ddd9}
+      #cvPreviewOverlay .pv-title{display:flex;flex-direction:column;min-width:0}
+      #cvPreviewOverlay .pv-title strong{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      #cvPreviewOverlay .pv-title span{font-size:12px;color:#667}
+      #cvPreviewOverlay .pv-actions{display:flex;gap:8px;flex:0 0 auto}
+      #cvPreviewOverlay .pv-btn{border:0;border-radius:8px;padding:10px 16px;font:600 13px Inter,Arial,sans-serif;cursor:pointer;background:var(--cv-primary,#15803d);color:#fff}
+      #cvPreviewOverlay .pv-btn.pv-ghost{background:#eef0ee;color:#222}
+      #cvPreviewOverlay .pv-btn:disabled{opacity:.6;cursor:wait}
+      #cvPreviewOverlay .pv-scroll{flex:1;overflow:auto;padding:16px 12px 40px}
+      #cvPreviewOverlay .pv-sizer{margin:0 auto}
+      #cvPreviewOverlay .pv-inner{width:210mm;display:flex;flex-direction:column;gap:18px;transform-origin:top left}
+      #cvPrintRoot{display:none}
+      @media print{
+        body>*:not(#cvPrintRoot){display:none!important}
+        #cvPrintRoot{display:block!important}
+        #cvPrintRoot,#cvPrintRoot *{visibility:visible!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+        html,body{margin:0!important;padding:0!important;height:auto!important;overflow:visible!important;background:#fff!important}
+        #cvPrintRoot .cv-page{width:210mm!important;height:296mm!important;min-height:296mm!important;margin:0!important;box-shadow:none!important;page-break-after:always;break-after:page}
+        #cvPrintRoot .cv-page:last-child{page-break-after:auto;break-after:auto}
+      }`;
+    document.head.appendChild(s);
   }
 
+  /* =========================================================
+     RENDER A4 PAGES (entry-level pagination, unlimited pages)
+  ========================================================= */
+  function render() {
+    injectCVStyles();
+    injectOutputStyles();
+    collect();
+    setAppearance();
+    renderSkills();
+    updateCompletion();
+    counter();
+
+    const root = $('#cvPages');
+    if (!root) return;
+    root.innerHTML = '';
+
+    const src = document.createElement('div');
+    src.innerHTML = content();
+
+    let pg, body, shell, shellSrc;
+
+    const newPage = () => {
+      pg = page();
+      root.appendChild(pg);
+      body = $('.cv-page-content', pg);
+      shell = shellSrc = null;
+    };
+    const overflow = () => body.scrollHeight > body.clientHeight + 1;
+
+    const startShell = (sec, cont) => {
+      shell = sec.cloneNode(false);
+      shellSrc = sec;
+      const h = $('h3', sec).cloneNode(true);
+      if (cont) h.textContent += ' (continued)';
+      shell.appendChild(h);
+      body.appendChild(shell);
+    };
+
+    const tryPlace = (node, sec, cont) => {
+      let el;
+      if (sec) {
+        if (shellSrc !== sec) startShell(sec, cont);
+        el = node.cloneNode(true);
+        shell.appendChild(el);
+      } else {
+        el = node.cloneNode(true);
+        body.appendChild(el);
+        shell = shellSrc = null;
+      }
+      if (!overflow()) return true;
+      if (body.children.length === 1 && (!sec || shell.children.length === 2)) return true;
+      el.remove();
+      if (sec && shell.children.length === 1) { shell.remove(); shell = shellSrc = null; }
+      return false;
+    };
+
+    newPage();
+
+    [...src.children].forEach(node => {
+      const entries = node.classList.contains('cv-section')
+        ? [...node.children].filter(c => c.classList.contains('cv-entry'))
+        : [];
+
+      if (entries.length > 1) {
+        entries.forEach((en, i) => {
+          if (!tryPlace(en, node, false)) {
+            newPage();
+            tryPlace(en, node, i > 0);
+          }
+        });
+      } else if (!tryPlace(node, null, false)) {
+        newPage();
+        tryPlace(node, null, false);
+      }
+    });
+
+    const pages = $$('.cv-page', root);
+    pages.forEach((p, i) => {
+      const f = document.createElement('div');
+      f.className = 'cv-page-footer';
+      f.textContent = `Page ${i + 1} of ${pages.length}`;
+      p.appendChild(f);
+    });
+
+    const label = $('#pageCountLabel');
+    if (label) label.textContent = `${pages.length} page${pages.length === 1 ? '' : 's'}`;
+
+    applyZoom();
+  }
+
+  /* =========================================================
+     FULL-SCREEN PREVIEW
+  ========================================================= */
+  function closePreview() {
+    $('#cvPreviewOverlay')?.remove();
+    document.body.style.overflow = '';
+    window.removeEventListener('resize', fitPreview);
+    document.removeEventListener('keydown', previewKey);
+  }
+  function previewKey(e) { if (e.key === 'Escape') closePreview(); }
+  function fitPreview() {
+    const ov = $('#cvPreviewOverlay');
+    if (!ov) return;
+    const scroll = $('.pv-scroll', ov), sizer = $('.pv-sizer', ov), inner = $('.pv-inner', ov);
+    inner.style.transform = 'none';
+    const w = inner.offsetWidth, h = inner.offsetHeight;
+    const s = Math.min(1, (scroll.clientWidth - 24) / w);
+    inner.style.transform = `scale(${s})`;
+    sizer.style.width = w * s + 'px';
+    sizer.style.height = h * s + 'px';
+  }
+  function openPreview() {
+    render();
+    closePreview();
+    const pages = $$('#cvPages .cv-page');
+    const ov = document.createElement('div');
+    ov.id = 'cvPreviewOverlay';
+    ov.innerHTML = `
+      <div class="pv-bar">
+        <div class="pv-title"><strong>${esc(data.cv_title || 'My CV')}</strong>
+          <span>${pages.length} page${pages.length === 1 ? '' : 's'} · A4</span></div>
+        <div class="pv-actions">
+          <button type="button" class="pv-btn" id="pvDownload">Download PDF</button>
+          <button type="button" class="pv-btn pv-ghost" id="pvClose">Close</button>
+        </div>
+      </div>
+      <div class="pv-scroll"><div class="pv-sizer"><div class="pv-inner"></div></div></div>`;
+    document.body.appendChild(ov);
+    document.body.style.overflow = 'hidden';
+    const inner = $('.pv-inner', ov);
+    pages.forEach(p => inner.appendChild(p.cloneNode(true)));
+    $('#pvClose', ov).onclick = closePreview;
+    $('#pvDownload', ov).onclick = downloadPDF;
+    window.addEventListener('resize', fitPreview);
+    document.addEventListener('keydown', previewKey);
+    fitPreview();
+  }
+
+  /* =========================================================
+     PDF DOWNLOAD (real file, with print fallback)
+  ========================================================= */
+  function loadScript(src) {
+    return new Promise((res, rej) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.onload = res;
+      s.onerror = () => rej(new Error('Could not load ' + src));
+      document.head.appendChild(s);
+    });
+  }
+  async function loadLibs() {
+    if (!window.html2canvas)
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+    if (!window.jspdf)
+      await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+  }
+  function fileName() {
+    return (data.cv_title || 'CV').replace(/[^\w\- ]+/g, '').trim().replace(/\s+/g, '_') || 'CV';
+  }
+
+  let downloading = false;
+  async function downloadPDF() {
+    if (downloading) return;
+    downloading = true;
+    const btns = [$('#downloadBtn'), $('#pvDownload')].filter(Boolean);
+    const labels = btns.map(b => b.innerHTML);
+    btns.forEach(b => { b.disabled = true; b.textContent = 'Preparing PDF…'; });
+    let stage;
+    try {
+      render();
+      save();
+      await loadLibs();
+      if (document.fonts?.ready) await document.fonts.ready;
+
+      const pages = $$('#cvPages .cv-page');
+      if (!pages.length) throw new Error('No pages to export');
+
+      stage = document.createElement('div');
+      stage.style.cssText = 'position:fixed;left:-10000px;top:0;width:210mm;background:#fff;';
+      document.body.appendChild(stage);
+
+      const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait', compress: true });
+
+      for (let i = 0; i < pages.length; i++) {
+        const clone = pages[i].cloneNode(true);
+        clone.style.boxShadow = 'none';
+        clone.style.margin = '0';
+        stage.innerHTML = '';
+        stage.appendChild(clone);
+        const canvas = await window.html2canvas(clone, {
+          scale: 2, backgroundColor: '#ffffff', useCORS: true, logging: false
+        });
+        if (i > 0) pdf.addPage('a4', 'portrait');
+        pdf.addImage(canvas.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+      }
+
+      pdf.save(fileName() + '.pdf');
+      toast('PDF downloaded', `${pages.length} page${pages.length === 1 ? '' : 's'} saved.`);
+    } catch (err) {
+      console.error('PDF export failed:', err);
+      toast('Using print instead', 'Choose "Save as PDF" in the print dialog.', 'error');
+      setTimeout(() => window.print(), 300);
+    } finally {
+      stage?.remove();
+      btns.forEach((b, i) => { b.disabled = false; b.innerHTML = labels[i]; });
+      downloading = false;
+    }
+  }
+
+  function buildPrintRoot() {
+    removePrintRoot();
+    const r = document.createElement('div');
+    r.id = 'cvPrintRoot';
+    $$('#cvPages .cv-page').forEach(p => r.appendChild(p.cloneNode(true)));
+    document.body.appendChild(r);
+  }
+  function removePrintRoot() { $('#cvPrintRoot')?.remove(); }
 
   /* =========================================================
      ZOOM
@@ -3897,7 +3676,6 @@
     const pages =
       $('#cvPages');
 
-
     if (pages) {
 
       pages.style.transform =
@@ -3905,10 +3683,8 @@
 
     }
 
-
     const zoomValue =
       $('#zoomValue');
-
 
     if (zoomValue) {
 
@@ -3921,7 +3697,6 @@
 
   }
 
-
   /* =========================================================
      SUMMARY COUNTER
   ========================================================= */
@@ -3931,10 +3706,8 @@
     const summary =
       $('#summary');
 
-
     const counterEl =
       $('#summaryCounter');
-
 
     if (
       summary &&
@@ -3942,12 +3715,11 @@
     ) {
 
       counterEl.textContent =
-        `${summary.value.length} / 2000`;
+        `${summary.value.length} / 1000`;
 
     }
 
   }
-
 
   /* =========================================================
      COMPLETION PERCENTAGE
@@ -3957,7 +3729,6 @@
 
     const p =
       data.personal || {};
-
 
     const checks = [
 
@@ -3994,12 +3765,10 @@
 
     ];
 
-
     const completed =
       checks.filter(
         Boolean
       ).length;
-
 
     const percentage =
       Math.round(
@@ -4008,14 +3777,11 @@
         100
       );
 
-
     const percent =
       $('#completionPercent');
 
-
     const bar =
       $('#completionBar');
-
 
     if (percent) {
 
@@ -4023,7 +3789,6 @@
         percentage + '%';
 
     }
-
 
     if (bar) {
 
@@ -4033,7 +3798,6 @@
     }
 
   }
-
 
   /* =========================================================
      SAVE
@@ -4045,10 +3809,8 @@
 
     collect();
 
-
     data.updated_at =
       new Date().toISOString();
-
 
     try {
 
@@ -4056,7 +3818,6 @@
         PREFIX + cvId,
         JSON.stringify(data)
       );
-
 
       localStorage.setItem(
 
@@ -4086,12 +3847,10 @@
 
       );
 
-
       setStatus(
         'Saved',
         'cloud_done'
       );
-
 
       if (show) {
 
@@ -4109,12 +3868,10 @@
         e
       );
 
-
       setStatus(
         'Save failed',
         'error'
       );
-
 
       toast(
         'Save failed',
@@ -4125,7 +3882,6 @@
     }
 
   }
-
 
   /* =========================================================
      AUTO SAVE
@@ -4138,11 +3894,9 @@
       'sync'
     );
 
-
     clearTimeout(
       saveTimer
     );
-
 
     saveTimer =
       setTimeout(
@@ -4160,7 +3914,6 @@
 
   }
 
-
   /* =========================================================
      SAVE STATUS
   ========================================================= */
@@ -4173,11 +3926,9 @@
     const el =
       $('#saveStatus');
 
-
     if (!el) {
       return;
     }
-
 
     el.innerHTML = `
 
@@ -4191,7 +3942,6 @@
 
   }
 
-
   /* =========================================================
      HISTORY
   ========================================================= */
@@ -4204,7 +3954,6 @@
 
   }
 
-
   function pushHistory(
     collectIt = true
   ) {
@@ -4215,10 +3964,8 @@
 
     }
 
-
     const s =
       snapshot();
-
 
     if (
       history[historyIndex] ===
@@ -4229,16 +3976,13 @@
 
     }
 
-
     history =
       history.slice(
         0,
         historyIndex + 1
       );
 
-
     history.push(s);
-
 
     if (
       history.length > 30
@@ -4248,12 +3992,10 @@
 
     }
 
-
     historyIndex =
       history.length - 1;
 
   }
-
 
   function restore(i) {
 
@@ -4266,16 +4008,13 @@
 
     }
 
-
     historyIndex =
       i;
-
 
     data =
       JSON.parse(
         history[i]
       );
-
 
     populate();
 
@@ -4284,7 +4023,6 @@
     save();
 
   }
-
 
   /* =========================================================
      SECTION NAVIGATION
@@ -4307,7 +4045,6 @@
         }
       );
 
-
     $$('.editor-nav-item')
       .forEach(
         button => {
@@ -4321,7 +4058,6 @@
         }
       );
 
-
     if (
       innerWidth < 1200
     ) {
@@ -4329,7 +4065,6 @@
       closeSidebar();
 
     }
-
 
     $('.editor-workspace')
       ?.scrollTo({
@@ -4342,7 +4077,6 @@
 
   }
 
-
   /* =========================================================
      CLOSE SIDEBAR
   ========================================================= */
@@ -4353,13 +4087,11 @@
       ?.classList
       .remove('open');
 
-
     $('#sidebarOverlay')
       ?.classList
       .remove('active');
 
   }
-
 
   /* =========================================================
      TOAST
@@ -4383,7 +4115,6 @@
     const toastEl =
       $('#editorToast');
 
-
     if (
       titleEl
     ) {
@@ -4393,7 +4124,6 @@
 
     }
 
-
     if (
       messageEl
     ) {
@@ -4402,7 +4132,6 @@
         msg;
 
     }
-
 
     if (
       iconEl
@@ -4415,7 +4144,6 @@
 
     }
 
-
     if (
       toastEl
     ) {
@@ -4424,11 +4152,9 @@
         'show'
       );
 
-
       clearTimeout(
         window.cvToast
       );
-
 
       window.cvToast =
         setTimeout(
@@ -4446,7 +4172,6 @@
 
   }
 
-
   /* =========================================================
      LOAD ACCOUNT
   ========================================================= */
@@ -4462,11 +4187,9 @@
           ) || 'null'
         );
 
-
       if (!u) {
         return;
       }
-
 
       const n =
         u.name ||
@@ -4474,7 +4197,6 @@
         u.username ||
         u.email ||
         'User';
-
 
       if (
         $('#topUserName')
@@ -4484,7 +4206,6 @@
           .textContent = n;
 
       }
-
 
       if (
         $('#topAvatar')
@@ -4509,7 +4230,6 @@
 
   }
 
-
   /* =========================================================
      EVENTS
   ========================================================= */
@@ -4531,7 +4251,6 @@
         }
       );
 
-
     /* Next */
 
     $$('.next-section-btn')
@@ -4546,7 +4265,6 @@
 
         }
       );
-
 
     /* Previous */
 
@@ -4563,7 +4281,6 @@
         }
       );
 
-
     /* Add repeatable items */
 
     Object.keys(
@@ -4578,7 +4295,6 @@
           type.slice(1) +
           'Btn';
 
-
         $(id)
           ?.addEventListener(
             'click',
@@ -4589,7 +4305,6 @@
       }
     );
 
-
     /* Add skill */
 
     $('#addSkillBtn')
@@ -4597,7 +4312,6 @@
         'click',
         addSkill
       );
-
 
     /* Form changes */
 
@@ -4622,7 +4336,6 @@
       }
     );
 
-
     document.addEventListener(
       'change',
       e => {
@@ -4644,7 +4357,6 @@
       }
     );
 
-
     /* CV title */
 
     $('#cvTitle')
@@ -4659,7 +4371,6 @@
 
         }
       );
-
 
     /* Zoom in */
 
@@ -4679,7 +4390,6 @@
         }
       );
 
-
     /* Zoom out */
 
     $('#zoomOutBtn')
@@ -4698,69 +4408,17 @@
         }
       );
 
-
     /* Preview */
-
-    $('#previewBtn')
-      ?.addEventListener(
-        'click',
-        () => {
-
-          render();
-
-          $('#previewPanel')
-            ?.scrollIntoView({
-              behavior: 'smooth'
-            });
-
-        }
-      );
-
+    $('#previewBtn')?.addEventListener('click', openPreview);
 
     /* Finish */
+    $('#finishBtn')?.addEventListener('click', () => {
+      save(true);
+      openPreview();
+    });
 
-    $('#finishBtn')
-      ?.addEventListener(
-        'click',
-        () => {
-
-          render();
-
-          save(true);
-
-          $('#previewPanel')
-            ?.scrollIntoView({
-              behavior: 'smooth'
-            });
-
-        }
-      );
-
-
-    /* Download / Print */
-
-    $('#downloadBtn')
-      ?.addEventListener(
-        'click',
-        () => {
-
-          render();
-
-          save();
-
-
-          setTimeout(
-            () => {
-
-              window.print();
-
-            },
-            100
-          );
-
-        }
-      );
-
+    /* Download PDF */
+    $('#downloadBtn')?.addEventListener('click', downloadPDF);
 
     /* Fullscreen */
 
@@ -4786,7 +4444,6 @@
         }
       );
 
-
     /* Mobile sidebar */
 
     $('#mobileMenuBtn')
@@ -4798,7 +4455,6 @@
             ?.classList
             .add('open');
 
-
           $('#sidebarOverlay')
             ?.classList
             .add('active');
@@ -4806,20 +4462,17 @@
         }
       );
 
-
     $('#sidebarClose')
       ?.addEventListener(
         'click',
         closeSidebar
       );
 
-
     $('#sidebarOverlay')
       ?.addEventListener(
         'click',
         closeSidebar
       );
-
 
     /* Profile dropdown */
 
@@ -4830,14 +4483,12 @@
 
           e.stopPropagation();
 
-
           $('#profileDropdown')
             ?.classList
             .toggle('active');
 
         }
       );
-
 
     document.addEventListener(
       'click',
@@ -4858,7 +4509,6 @@
       }
     );
 
-
     /* Logout */
 
     $('#logoutBtn')
@@ -4878,13 +4528,11 @@
             'current_cv_id'
           );
 
-
           location.href =
             'login.html';
 
         }
       );
-
 
     /* Close toast */
 
@@ -4900,7 +4548,6 @@
         }
       );
 
-
     /* Undo */
 
     $('#undoBtn')
@@ -4911,7 +4558,6 @@
             historyIndex - 1
           )
       );
-
 
     /* Redo */
 
@@ -4924,7 +4570,6 @@
           )
       );
 
-
     /* Photo upload */
 
     $('#photoInput')
@@ -4935,11 +4580,9 @@
           const f =
             e.target.files?.[0];
 
-
           if (!f) {
             return;
           }
-
 
           if (
             f.size >
@@ -4956,17 +4599,14 @@
 
           }
 
-
           const reader =
             new FileReader();
-
 
           reader.onload =
             () => {
 
               data.photo =
                 reader.result;
-
 
               renderPhoto();
 
@@ -4976,14 +4616,12 @@
 
             };
 
-
           reader.readAsDataURL(
             f
           );
 
         }
       );
-
 
     /* Remove photo */
 
@@ -4995,7 +4633,6 @@
           data.photo =
             '';
 
-
           renderPhoto();
 
           render();
@@ -5005,22 +4642,18 @@
         }
       );
 
+    /* Print (Ctrl+P and fallback) */
+    window.addEventListener('beforeprint', () => {
+      collect();
+      render();
+      buildPrintRoot();
+    });
+    window.addEventListener('afterprint', removePrintRoot);
 
-    /* Before print */
-
-    window.addEventListener(
-      'beforeprint',
-      () => {
-
-        collect();
-
-        render();
-
-      }
-    );
+    /* Warm up PDF libraries */
+    setTimeout(() => loadLibs().catch(() => {}), 1500);
 
   }
-
 
   /* =========================================================
      START APPLICATION
@@ -5030,11 +4663,9 @@
     meta().primary_color ||
     data.primary_color;
 
-
   data.font =
     meta().font ||
     data.font;
-
 
   /*
     First inject A4 styles.
@@ -5042,13 +4673,11 @@
 
   injectCVStyles();
 
-
   /*
     Load CV.
   */
 
   load();
-
 
   /*
     Bind delete buttons.
@@ -5056,13 +4685,11 @@
 
   bindDeletes();
 
-
   /*
     Bind events.
   */
 
   events();
-
 
   /*
     Final render.
